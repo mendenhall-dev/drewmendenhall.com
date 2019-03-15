@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "drewmendenhall.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The source for my personal web site.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Drew Mendenhall <drew@mendenhall.io>",
   "dependencies": {
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.33",
@@ -35,9 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://code.mendenhall.io/drew/drewmendenhall.com"
   }
 }
