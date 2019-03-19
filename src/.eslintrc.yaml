@@ -7,6 +7,7 @@ rules:
   react/jsx-boolean-value: warn
   react/jsx-closing-bracket-location: warn
   react/jsx-curly-spacing: [warn, never]
+  react/jsx-fragments: [warn, element]
   react/jsx-indent-props: [warn, 2]
   react/jsx-no-undef: error
   react/jsx-uses-react: warn
@@ -19,4 +20,4 @@ rules:
   react/sort-prop-types: warn
 settings:
   react:
-    version: 16
+    version: 16.8
