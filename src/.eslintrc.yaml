@@ -3,6 +3,7 @@ parserOptions:
     jsx: true
 plugins:
   - react
+  - react-hooks
 rules:
   react/jsx-boolean-value: warn
   react/jsx-closing-bracket-location: warn
