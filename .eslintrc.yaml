@@ -1,40 +1,31 @@
 env:
   node: true
 parserOptions:
-  ecmaFeatures:
-    jsx: true
   ecmaVersion: 2019
   sourceType: module
-plugins:
-  - react
 rules:
-  comma-dangle: [warn, always-multiline]
+  array-bracket-spacing: warn
+  comma-dangle:
+    [
+      warn,
+      {
+        arrays: always-multiline,
+        exports: always-multiline,
+        functions: always-multiline,
+        imports: always-multiline,
+        objects: always-multiline,
+      },
+    ]
   comma-spacing: warn
   curly: [warn, multi-line]
-  indent-legacy: [warn, 2, {SwitchCase: 1}]
+  indent: [warn, 2, {SwitchCase: 1, flatTernaryExpressions: true}]
   no-irregular-whitespace: error
   no-mixed-spaces-and-tabs: warn
   no-undef: error
   no-unused-vars: [warn, {ignoreRestSiblings: true}]
+  object-curly-spacing: warn
   object-shorthand: warn
   quotes: [warn, single, {avoidEscape: true}]
   quote-props: [warn, consistent-as-needed]
   semi: [error, never]
   strict: [error, never]
-
-  react/jsx-boolean-value: warn
-  react/jsx-closing-bracket-location: warn
-  react/jsx-curly-spacing: [warn, never]
-  react/jsx-indent-props: [warn, 2]
-  react/jsx-no-undef: error
-  react/jsx-uses-react: warn
-  react/jsx-uses-vars: warn
-  react/jsx-wrap-multilines: warn
-  react/no-direct-mutation-state: error
-  react/no-multi-comp: warn
-  react/no-unknown-property: error
-  react/react-in-jsx-scope: error
-  react/sort-prop-types: warn
-settings:
-  react:
-    version: 16
