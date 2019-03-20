@@ -1,0 +1,86 @@
+stages:
+  - build
+  - deploy
+  - stop
+
+variables:
+  BUILD_PATH: public
+  DEPLOY_ROOT: /var/www
+  NODE_ENV: production
+
+build:
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - $BUILD_PATH
+  cache:
+    untracked: true
+  script:
+    - node --version
+    - npm --version
+    - NODE_ENV= npm ci
+    - npm run build
+  stage: build
+  tags:
+    - docker-node
+
+.deploy: &deploy
+  environment:
+    url: https://$HOSTNAME
+  script:
+    - envsubst < deploy/site.bootstrap.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
+    - ln -s -fn ../sites-available/$HOSTNAME.conf /etc/nginx/sites-enabled/$HOSTNAME.conf
+    - sudo nginx -s reload
+    - sudo letsencrypt certonly --domain $HOSTNAME --domain www.$HOSTNAME
+    - envsubst < deploy/site.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
+    - ln -s -fn $(pwd)/$BUILD_PATH $DEPLOY_PATH
+    - sudo nginx -s reload
+  stage: deploy
+  tags:
+    - www-server
+
+deploy:
+  <<: *deploy
+  environment:
+    name: production
+    url: https://$DEPLOY_HOST
+  only:
+    - master
+  variables:
+    DEPLOY_PATH: $DEPLOY_ROOT/$DEPLOY_HOST
+    HOSTNAME: $DEPLOY_HOST
+
+deploy-branch:
+  <<: *deploy
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    on_stop: stop
+    url: https://$CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+  only:
+    - branches
+  except:
+    - master
+  variables:
+    DEPLOY_PATH: $DEPLOY_ROOT/$CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+    HOSTNAME: $CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+
+stop:
+  environment:
+    action: stop
+    name: $CI_COMMIT_REF_NAME
+  except:
+    - master
+  script:
+    - rm -rf $DEPLOY_PATH
+    - rm /etc/nginx/sites-{available,enabled}/$HOSTNAME.conf
+    - sudo letsencrypt revoke --cert-path /etc/letsencrypt/live/$HOSTNAME/cert.pem
+    - sudo nginx -s reload
+  stage: stop
+  tags:
+    - www-server
+  variables:
+    CONTAINER_TAG: $CI_COMMIT_REF_SLUG
+    GIT_STRATEGY: none
+    HOSTNAME: $CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+
+  when: manual
