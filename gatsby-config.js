@@ -4,5 +4,9 @@ module.exports = {
     description: 'Web Developer.',
     author: 'drew@mendenhall.io',
   },
-  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-offline'],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-styled-components',
+  ],
 }
