@@ -6,10 +6,15 @@ import styled from 'styled-components'
 import GlobalStyle from '../GlobalStyle'
 import SEO from '../components/seo'
 
+const blue = '#75afec'
 const greyDark = '#aaa'
 const grey = '#ddd'
 const greyLight = '#f8f8f8'
 const jobSpacing = '3em'
+const strokeWidth = 2
+
+const accentColor = blue
+const strokeColor = grey
 
 const Container = styled.div`
   max-width: 800px;
@@ -25,23 +30,24 @@ const Container = styled.div`
   }
 `
 const Header = styled.header`
-  font-family: Libre Baskerville, Baskerville;
+  font-family: Libre Baskerville, Baskerville, serif;
   background: ${greyLight};
-  border-bottom: 3px solid ${grey};
+  border-bottom: ${strokeWidth}px solid ${strokeColor};
   padding-top: 1rem;
 
   h1 {
     margin: 0;
   }
 `
+const Subtitle = styled.div`
+  color: ${accentColor};
+  font-family: Comfortaa, sans-serif;
+  font-weight: bold;
+`
 const Footer = styled.footer`
   background: ${greyLight};
-  border-top: 3px solid ${grey};
+  border-top: ${strokeWidth}px solid ${strokeColor};
   min-height: 3em;
-
-  @media print {
-    display: none;
-  }
 `
 const SectionHeader = styled.h2`
   font-family: Comfortaa, sans-serif;
@@ -75,19 +81,40 @@ const JobList = styled.ul`
 const Master = styled.div`
   display: table-cell;
   padding-right: 20px;
-  border-right: 3px solid ${grey};
+  border-right: ${strokeWidth}px solid ${strokeColor};
   text-align: right;
 `
 const Detail = styled.div`
   display: table-cell;
-  flex-shrink: 1;
   padding-left: 20px;
-
   padding-bottom: ${jobSpacing};
+
+  position: relative;
+
+  :before {
+    content: '';
+
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 100%;
+    background: ${accentColor};
+
+    position: absolute;
+    left: -0.35em;
+    top: 0.25em;
+
+    @media print {
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+      display: block;
+    }
+  }
 `
 
 const Company = styled.div`
   color: ${greyDark};
+
   @media print {
     color: inherit;
   }
@@ -109,6 +136,7 @@ export default () => (
     <Header>
       <Container>
         <h1>Drew Mendenhall</h1>
+        <Subtitle>Full-Stack Web Developer</Subtitle>
         <p>
           Full-stack web developer passionate about using the best tools for the
           job. I have primarily worked on ASP.NET and NodeJS back-ends, and I am
@@ -229,6 +257,26 @@ export default () => (
                 software development practices.
               </li>
             </JobHighlights>
+          </Detail>
+        </Job>
+
+        <Job>
+          <Master>
+            <SectionHeader>Education</SectionHeader>
+          </Master>
+        </Job>
+        <Job>
+          <Period>2010 - 2012</Period>
+          <Detail>
+            <Position>Bachelor of Science, Computer Engineering</Position>
+            <Company>The University of Texas at Dallas</Company>
+          </Detail>
+        </Job>
+        <Job>
+          <Period>2006 - 2009</Period>
+          <Detail>
+            <Position>Bachelor of Science, Computer Engineering</Position>
+            <Company>The University of Texas at Austin</Company>
           </Detail>
         </Job>
       </JobList>
