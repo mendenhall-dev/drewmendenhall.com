@@ -68,6 +68,7 @@ const Job = styled.li`
   padding-left: 1.5em;
   list-style: none;
   padding: 0;
+  page-break-inside: avoid;
 `
 const JobHighlights = styled.ul`
   padding-left: 1.25em;
