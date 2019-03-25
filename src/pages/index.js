@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import GlobalStyle from '../GlobalStyle'
 import SEO from '../components/seo'
+import jobs from '../jobs'
 
 const blue = '#75afec'
 const greyDark = '#aaa'
@@ -161,105 +162,22 @@ export default () => (
             <SectionHeader>Experience</SectionHeader>
           </Master>
         </Job>
-        <Job>
-          <Period>Mar 2018 - present</Period>
-          <Detail>
-            <Position>CTO & Co-Founder</Position>
-            <Company>Noomist</Company>
-            <JobHighlights>
-              <li>
-                Designed, architected, and a mobile web application using React,
-                Redux, and GraphQL.
-              </li>
-              <li>
-                Implement the same feature set and RFID via Bluetooth on iOS and
-                Android using React Native.
-              </li>
-              <li>
-                Maintain a deployment pipeline with one QA environment per git
-                branch via Terraform, GitLab, and Docker.
-              </li>
-            </JobHighlights>
-          </Detail>
-        </Job>
-        <Job>
-          <Period>Jan 2016 - Mar 2018</Period>
-          <Detail>
-            <Position>Software Developer</Position>
-            <Company>Elemetal</Company>
-            <JobHighlights>
-              <li>
-                Maintained large Angular application that keeps track of
-                customers, inventory, and shipments.
-              </li>
-              <li>
-                Migrate - one page at a time - to a more responsive and reliable
-                version built on nodejs, GraphQL, React, and Redux.
-              </li>
-              <li>
-                Administered linux servers and deployment pipeline on Docker and
-                nginx.
-              </li>
-              <li>
-                Maintained public web site and built integration with Docusign
-                for new customer applications.
-              </li>
-            </JobHighlights>
-          </Detail>
-        </Job>
-        <Job>
-          <Period>Aug 2014 - Jun 2015</Period>
-          <Detail>
-            <Position>Software Developer</Position>
-            <Company>DonorDirect</Company>
-            <JobHighlights>
-              <li>
-                Helped build a new Web UI, powered by React and Backbone, for a
-                full-featured donor management system. This replaced a WPF/C#
-                desktop application.
-              </li>
-              <li>
-                Architected a library of basic, reusable HTML snippets, backed
-                by LESS styling, which follow visual design specifications,
-                pixel for pixel.
-              </li>
-              <li>
-                Leveraged the grunt.js build system to enable and enhance rapid
-                iteration in daily development workflow, with no compromises.
-              </li>
-              <li>
-                Worked as part of a medium-size scrum team which follows agile
-                software development practices.
-              </li>
-            </JobHighlights>
-          </Detail>
-        </Job>
-        <Job>
-          <Period>Sep 2013 - Apr 2014</Period>
-          <Detail>
-            <Position>Front End UI Developer</Position>
-            <Company>Intuit</Company>
-            <JobHighlights>
-              <li>
-                Constructed a one-stop web application for accountants as a
-                composition of AngularJS modules.
-              </li>
-              <li>
-                Architected a library of basic, reusable HTML snippets, backed
-                by LESS styling, which follow visual design specifications,
-                pixel for pixel.
-              </li>
-              <li>
-                Leveraged the grunt.js build system to enable and enhance rapid
-                iteration in daily development workflow, with no compromises.
-              </li>
-              <li>
-                Worked as part of a medium-size scrum team which follows agile
-                software development practices.
-              </li>
-            </JobHighlights>
-          </Detail>
-        </Job>
+        {jobs.map(({startDate, endDate, company, position, highlights}) => (
+          <Job key={company}>
+            <Period>
+              {startDate} - {endDate || 'present'}
+            </Period>
+            <Detail>
+              <Position>{position}</Position>
+              <Company>{company}</Company>
+              <JobHighlights>
+                {highlights.map(highlight => (
+                  <li>{highlight}</li>
+                ))}
+              </JobHighlights>
+            </Detail>
+          </Job>
+        ))}
 
         <Job>
           <Master>
@@ -267,17 +185,16 @@ export default () => (
           </Master>
         </Job>
         <Job>
-          <Period>2010 - 2012</Period>
+          <Period>2012</Period>
           <Detail>
             <Position>Bachelor of Science, Computer Engineering</Position>
             <Company>The University of Texas at Dallas</Company>
           </Detail>
         </Job>
         <Job>
-          <Period>2006 - 2009</Period>
+          <Period>2006</Period>
           <Detail>
-            <Position>Bachelor of Science, Computer Engineering</Position>
-            <Company>The University of Texas at Austin</Company>
+            <Company>Jesuit Dallas</Company>
           </Detail>
         </Job>
       </JobList>

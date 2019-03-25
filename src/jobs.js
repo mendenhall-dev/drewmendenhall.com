@@ -1,0 +1,87 @@
+export default [
+  {
+    startDate: 'Mar 2018',
+    company: 'Noomist',
+    position: 'CTO & Co-Founder',
+    highlights: [
+      'Designed, architected, and developed a mobile web application using React, Redux, and GraphQL.',
+      'Implement the same feature set and RFID via Bluetooth on iOS and Android using React Native.',
+      'Maintain a deployment pipeline with one QA environment per git branch via Terraform, GitLab, and Docker.',
+    ],
+  },
+  {
+    startDate: 'Jan 2016',
+    endDate: 'Mar 2018',
+    company: 'Elemetal',
+    position: 'Software Developer',
+    highlights: [
+      'Maintained large Angular application that keeps track of customers, inventory, and shipments.',
+      'Migrate - one page at a time - to a more responsive and reliable version built on nodejs, GraphQL, React, and Redux.',
+      'Administered linux servers and deployment pipeline on Docker and nginx.',
+      'Maintained public web site and built integration with Docusign for new customer applications.',
+    ],
+  },
+  {
+    startDate: 'Aug 2014',
+    endDate: 'Jun 2015',
+    company: 'DonorDirect',
+    position: 'Software Developer',
+    highlights: [
+      'Helped build a new Web UI, powered by React and Backbone, for a full-featured donor management system. This replaced a WPF/C# desktop application.',
+      'Advocated ES5, ES6, and idiomatic javascript on a daily basis. Pushed migration to babeljs transpiler.',
+      'Introduced LESS architecture to bring structure to the way pages and components are styled.',
+      'Streamlined front-end dev workflow with a build system based on npm scripts and webpack dev server with live-reloading styles and components.',
+    ],
+  },
+  {
+    startDate: 'Sep 2013',
+    endDate: 'Apr 2014',
+    company: 'Intuit',
+    position: 'Front End UI Developer',
+    highlights: [
+      'Constructed a one-stop web application for accountants as a composition of AngularJS modules.',
+      'Architected a library of basic, reusable HTML snippets, backed by LESS styling, which follow visual design specifications, pixel-for-pixel.',
+      'Leveraged the grunt.js build system to enable and enhance rapid iteration in daily development workflow, with no compromises.',
+      'Worked as part of a medium-size scrum team which follows agile software development practices.',
+    ],
+  },
+  {
+    startDate: 'Apr 2013',
+    endDate: 'Aug 2013',
+    company: 'Vox Technologies',
+    position: 'Web Developer',
+    highlights: [
+      'Took ownership of the engine that runs a family of public-facing e-commerce web sites.',
+      'Cleaned up the code to leverage built-in ASP.NET MVC functions (e.g. router, Razor view engine).',
+      'Aggressive cache policies cache both the results of common database queries as well as the rendered HTML output of common pieces of web pages. These caches are cleared and re-filled nightly.',
+      'Converted monolithic CSS and Javascript to re-usable modules that progressively enhance the user’s experience and gracefully degrade in non- modern browsers.',
+      'Handwrote SVG for a logo and integrated into site in a way that allows color customization for spinning off new retail domains. This SVG is then used to generate favicons.',
+      'Implemented a responsive, yet powerful search engine which searches across hundreds of thousands of products and specs to provide results ranked by relevance. Autocomplete acts as a quick product number look-up.',
+    ],
+  },
+  {
+    startDate: 'May 2012',
+    endDate: 'Oct 2013',
+    company: 'Customer Feedback Systems',
+    position: 'Front End UI Developer',
+    highlights: [
+      'Designed and developed system that enables swift and reliable creation and management of surveys for CFS’s clients. Major clients include Air France and Vanguard Health Systems.',
+      'Three single-page applications use knockout.js with object-oriented models to provide a rich user interface and real-time, accurate representation of data.',
+      'Requests are sent to RESTful API, using ASP.NET Web API.',
+      'Implemented ASP.NET Forms Security with custom Membership and Role Providers, and a self-architected claims-based system, which control users’ access to surveys.',
+      'Installed SSL certificates in IIS with HTTP Redirection to ensure all of client’s data is securely transported.',
+      'Administered FTP Secure site in IIS with user-isolated folders.',
+    ],
+  },
+  {
+    startDate: 'Jun 2009',
+    endDate: 'Nov 2010',
+    company: 'St. Jude Medical',
+    position: 'Junior Software Developer',
+    highlights: [
+      'Worked with a team to debug and add enhancements to Business IT Web Applications.',
+      'Designed, implemented, and maintained time-tracking and inventory-tracking web apps.',
+      'Utilized Ajax/JSON to minimize bandwidth usage and provide a responsive UI.',
+    ],
+  },
+]
