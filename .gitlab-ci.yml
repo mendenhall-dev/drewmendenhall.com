@@ -15,10 +15,11 @@ build:
       - $BUILD_PATH
   cache:
     untracked: true
+  image: alekzonder/puppeteer
   script:
     - node --version
     - npm --version
-    - NODE_ENV= npm ci
+    - NODE_ENV= npm i
     - npm run build
   stage: build
   tags:
