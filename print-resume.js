@@ -39,9 +39,9 @@ const renderPdf = async ({filename, html}) => {
   })
   const page = await browser.newPage()
 
-  await page.goto(`data:text/html,${html}`)
-  return page
-    .pdf({
+  try {
+    await page.goto(`data:text/html,${html}`)
+    await page.pdf({
       path: filename,
       format: 'Letter',
       margin: {
@@ -51,10 +51,9 @@ const renderPdf = async ({filename, html}) => {
         right: '1in',
       },
     })
-    .finally(async content => {
-      await browser.close()
-      return content
-    })
+  } finally {
+    await browser.close()
+  }
 }
 
 const render = async () => {
