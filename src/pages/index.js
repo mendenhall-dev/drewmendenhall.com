@@ -171,8 +171,8 @@ export default () => (
               <Position>{position}</Position>
               <Company>{company}</Company>
               <JobHighlights>
-                {highlights.map(highlight => (
-                  <li>{highlight}</li>
+                {highlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
                 ))}
               </JobHighlights>
             </Detail>
