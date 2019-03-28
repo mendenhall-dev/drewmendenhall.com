@@ -139,6 +139,9 @@ export default () => (
       <Container>
         <h1>Drew Mendenhall</h1>
         <Subtitle>Full-Stack Web Developer</Subtitle>
+        <div>
+          <a href="mailto:drew@mendenhall.io">drew@mendenhall.io</a>
+        </div>
         <p>
           Full-stack web developer passionate about using the best tools for the
           job. I have primarily worked on ASP.NET and NodeJS back-ends, and I am

@@ -8,6 +8,13 @@ export default createGlobalStyle(css`
   * {
     box-sizing: inherit;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
   @media print {
     body {
