@@ -2,6 +2,7 @@ import 'typeface-comfortaa'
 import 'typeface-libre-baskerville'
 import React from 'react'
 import styled from 'styled-components'
+import {MailOutline as Mail} from '@material-ui/icons'
 
 import GlobalStyle from '../GlobalStyle'
 import SEO from '../components/seo'
@@ -44,6 +45,21 @@ const Subtitle = styled.div`
   color: ${accentColor};
   font-family: Comfortaa, sans-serif;
   font-weight: bold;
+`
+const EmailLink = styled.a`
+  font-family: Comfortaa, sans-serif;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+
+  svg {
+    height: 0.8em;
+    width: 0.8em;
+    fill: rgba(0, 0, 0, 0.2);
+  }
+  :hover svg {
+    fill: currentColor;
+  }
 `
 const Footer = styled.footer`
   background: ${greyLight};
@@ -139,9 +155,9 @@ export default () => (
       <Container>
         <h1>Drew Mendenhall</h1>
         <Subtitle>Full-Stack Web Developer</Subtitle>
-        <div>
-          <a href="mailto:drew@mendenhall.io">drew@mendenhall.io</a>
-        </div>
+        <EmailLink href="mailto:drew@mendenhall.io">
+          <Mail /> drew@mendenhall.io
+        </EmailLink>
         <p>
           Full-stack web developer passionate about using the best tools for the
           job. I have primarily worked on ASP.NET and NodeJS back-ends, and I am

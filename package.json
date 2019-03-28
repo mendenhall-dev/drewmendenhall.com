@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Drew Mendenhall <drew@mendenhall.io>",
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.33",
