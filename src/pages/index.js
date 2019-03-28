@@ -103,8 +103,8 @@ const Detail = styled.div`
     background: ${accentColor};
 
     position: absolute;
-    left: -0.35em;
-    top: 0.25em;
+    left: -0.3em;
+    top: 0.3em;
 
     @media print {
       -webkit-print-color-adjust: exact;
