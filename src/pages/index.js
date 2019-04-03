@@ -21,9 +21,12 @@ const strokeColor = grey
 
 const Container = styled.div`
   max-width: 800px;
-  margin-left: 20px;
+  margin-left: 40px;
   margin-right: 20px;
 
+  @media print, screen and (min-width: ${breakpoint}px) {
+    margin-left: 20px;
+  }
   @media (min-width: 840px) {
     margin: auto;
   }
