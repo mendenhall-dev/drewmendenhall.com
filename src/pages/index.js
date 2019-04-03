@@ -9,6 +9,7 @@ import SEO from '../components/seo'
 import jobs from '../jobs'
 
 const blue = '#75afec'
+const breakpoint = 600
 const greyDark = '#aaa'
 const grey = '#ddd'
 const greyLight = '#f8f8f8'
@@ -69,45 +70,57 @@ const Footer = styled.footer`
 const SectionHeader = styled.h2`
   font-family: Comfortaa, sans-serif;
   text-transform: uppercase;
-  position: relative;
-  left: 66.7%;
-  background: white;
-  padding: 0.5em;
   ${'' /* Vertically center text  */}
   padding-bottom: 6px;
+  @media print, screen and (min-width: ${breakpoint}px) {
+    position: relative;
+    left: 66.7%;
+    padding: 0.5em;
+    background: white;
+  }
 `
 const Section = styled(Container)`
   font-family: Libre Baskerville, Baskerville, serif;
 `
 
 const Job = styled.li`
-  display: table-row;
   padding-left: 1.5em;
   list-style: none;
   padding: 0;
   page-break-inside: avoid;
+
+  @media print, screen and (min-width: ${breakpoint}px) {
+    display: table-row;
+  }
 `
 const JobHighlights = styled.ul`
   padding-left: 1.25em;
 `
 const JobList = styled.ul`
-  display: table;
   margin: 0;
   padding: 0;
+
+  @media print, screen and (min-width: ${breakpoint}px) {
+    display: table;
+  }
 `
 
 const Master = styled.div`
-  display: table-cell;
-  padding-right: 20px;
-  border-right: ${strokeWidth}px solid ${strokeColor};
-  text-align: right;
+  @media print, screen and (min-width: ${breakpoint}px) {
+    display: table-cell;
+    padding-right: 20px;
+    border-right: ${strokeWidth}px solid ${strokeColor};
+    text-align: right;
+  }
 `
 const Detail = styled.div`
-  display: table-cell;
   padding-left: 20px;
   padding-bottom: ${jobSpacing};
 
-  position: relative;
+  @media print, screen and (min-width: ${breakpoint}px) {
+    display: table-cell;
+    position: relative;
+  }
 
   :before {
     content: '';
@@ -142,6 +155,7 @@ const Period = styled(Master)`
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;
+  padding-left: 20px;
 `
 const Position = styled.h4`
   margin: 0;
