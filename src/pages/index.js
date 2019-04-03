@@ -57,8 +57,8 @@ const EmailLink = styled.a`
   align-items: center;
 
   svg {
-    height: 0.8em;
-    width: 0.8em;
+    height: 1rem;
+    width: 1rem;
     fill: rgba(0, 0, 0, 0.2);
   }
   :hover svg {
