@@ -70,12 +70,16 @@ const Footer = styled.footer`
 const SectionHeader = styled.h2`
   font-family: Comfortaa, sans-serif;
   text-transform: uppercase;
-  ${'' /* Vertically center text  */}
-  padding-bottom: 6px;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
   @media print, screen and (min-width: ${breakpoint}px) {
     position: relative;
     left: 66.7%;
-    padding: 0.5em;
+    margin: 0.8em;
+    padding-top: 0.5em;
+    ${'' /* Vertically center text  */}
+    padding-bottom: 6px;
     background: white;
   }
 `
@@ -86,11 +90,14 @@ const Section = styled(Container)`
 const Job = styled.li`
   padding-left: 1.5em;
   list-style: none;
+  border-left: ${strokeWidth}px solid ${strokeColor};
   padding: 0;
   page-break-inside: avoid;
+  position: relative;
 
   @media print, screen and (min-width: ${breakpoint}px) {
     display: table-row;
+    border-left: none;
   }
 `
 const JobHighlights = styled.ul`
