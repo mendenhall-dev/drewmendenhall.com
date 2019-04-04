@@ -51,12 +51,14 @@ const Subtitle = styled.div`
   font-weight: bold;
 `
 const EmailLink = styled.a`
+  margin-top: 0.2em;
   font-family: Comfortaa, sans-serif;
   font-size: 0.8em;
   display: flex;
   align-items: center;
 
   svg {
+    margin-right: 0.2rem;
     height: 1rem;
     width: 1rem;
     fill: rgba(0, 0, 0, 0.2);
