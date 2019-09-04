@@ -19,6 +19,9 @@ const strokeWidth = 2
 const accentColor = blue
 const strokeColor = grey
 
+const strokeColorDark = '#5a5a5a'
+const backgroundAccentDark = '#1a1a1a'
+
 const Container = styled.div`
   max-width: 800px;
   margin-left: 40px;
@@ -37,9 +40,14 @@ const Container = styled.div`
 `
 const Header = styled.header`
   font-family: Libre Baskerville, Baskerville, serif;
+  padding-top: 1rem;
+
   background: ${greyLight};
   border-bottom: ${strokeWidth}px solid ${strokeColor};
-  padding-top: 1rem;
+  @media screen and (prefers-color-scheme: dark) {
+    background: ${backgroundAccentDark};
+    border-bottom-color: ${strokeColorDark};
+  }
 
   h1 {
     margin: 0;
@@ -61,16 +69,24 @@ const EmailLink = styled.a`
     margin-right: 0.2rem;
     height: 1rem;
     width: 1rem;
+
     fill: rgba(0, 0, 0, 0.2);
+    @media screen and (prefers-color-scheme: dark) {
+      fill: rgba(255, 255, 255, 0.8);
+    }
   }
   :hover svg {
     fill: currentColor;
   }
 `
 const Footer = styled.footer`
+  min-height: 3em;
   background: ${greyLight};
   border-top: ${strokeWidth}px solid ${strokeColor};
-  min-height: 3em;
+  @media screen and (prefers-color-scheme: dark) {
+    background: ${backgroundAccentDark};
+    border-top-color: ${strokeColorDark};
+  }
 `
 const SectionHeader = styled.h2`
   font-family: Comfortaa, sans-serif;
@@ -85,7 +101,11 @@ const SectionHeader = styled.h2`
     padding-top: 0.5em;
     ${'' /* Vertically center text  */}
     padding-bottom: 6px;
+
     background: white;
+    @media screen and (prefers-color-scheme: dark) {
+      background: black;
+    }
   }
 `
 const Section = styled(Container)`
@@ -104,6 +124,9 @@ const Job = styled.li`
     display: table-row;
     border-left: none;
   }
+  @media screen and (prefers-color-scheme: dark) {
+    border-left-color: ${strokeColorDark};
+  }
 `
 const JobHighlights = styled.ul`
   padding-left: 1.25em;
@@ -121,8 +144,12 @@ const Master = styled.div`
   @media print, screen and (min-width: ${breakpoint}px) {
     display: table-cell;
     padding-right: 20px;
-    border-right: ${strokeWidth}px solid ${strokeColor};
     text-align: right;
+
+    border-right: ${strokeWidth}px solid ${strokeColor};
+    @media screen and (prefers-color-scheme: dark) {
+      border-right-color: ${strokeColorDark};
+    }
   }
 `
 const Detail = styled.div`
@@ -157,7 +184,6 @@ const Detail = styled.div`
 
 const Company = styled.div`
   color: ${greyDark};
-
   @media print {
     color: inherit;
   }

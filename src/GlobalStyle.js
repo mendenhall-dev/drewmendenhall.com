@@ -4,6 +4,11 @@ export default createGlobalStyle(css`
   body {
     box-sizing: border-box;
     margin: 0;
+
+    @media screen and (prefers-color-scheme: dark) {
+      background: black;
+      color: white;
+    }
   }
   * {
     box-sizing: inherit;
