@@ -56,14 +56,14 @@ deploy-branch:
   environment:
     name: $CI_COMMIT_REF_NAME
     on_stop: stop
-    url: https://$CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+    url: https://$CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
   only:
     - branches
   except:
     - master
   variables:
     DEPLOY_PATH: $DEPLOY_ROOT/$CI_COMMIT_REF_SLUG.$DEPLOY_HOST
-    HOSTNAME: $CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+    HOSTNAME: $CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
 
 stop:
   environment:
@@ -82,6 +82,6 @@ stop:
   variables:
     CONTAINER_TAG: $CI_COMMIT_REF_SLUG
     GIT_STRATEGY: none
-    HOSTNAME: $CI_COMMIT_REF_SLUG.$DEPLOY_HOST
+    HOSTNAME: $CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
 
   when: manual
