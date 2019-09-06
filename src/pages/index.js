@@ -97,10 +97,9 @@ const SectionHeader = styled.h2`
   text-transform: uppercase;
   margin: 0;
   padding: 1em;
-  text-align: center;
   @media print, screen and (min-width: ${breakpoint}px) {
     position: relative;
-    left: 66.7%;
+    left: -12%;
     margin: 0.8em 0;
     padding: 0;
     padding-top: 0.5em;
@@ -110,6 +109,10 @@ const SectionHeader = styled.h2`
     background: white;
     @media screen and (prefers-color-scheme: dark) {
       background: black;
+    }
+
+    h2 {
+      text-align: left;
     }
   }
 `
@@ -238,9 +241,8 @@ export default () => (
     <Section>
       <JobList>
         <Job>
-          <Master>
-            <SectionHeader>Experience</SectionHeader>
-          </Master>
+          <Master />
+          <SectionHeader>Experience</SectionHeader>
         </Job>
         {jobs.map(({startDate, endDate, company, position, highlights}) => (
           <Job key={company}>
@@ -260,9 +262,8 @@ export default () => (
         ))}
 
         <Job>
-          <Master>
-            <SectionHeader>Education</SectionHeader>
-          </Master>
+          <Master />
+          <SectionHeader>Education</SectionHeader>
         </Job>
         <Job>
           <Period>2012</Period>
