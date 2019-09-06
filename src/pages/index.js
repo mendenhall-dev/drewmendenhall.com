@@ -97,7 +97,8 @@ const SectionHeader = styled.h2`
   @media print, screen and (min-width: ${breakpoint}px) {
     position: relative;
     left: 66.7%;
-    margin: 0.8em;
+    margin: 0.8em 0;
+    padding: 0;
     padding-top: 0.5em;
     ${'' /* Vertically center text  */}
     padding-bottom: 6px;
@@ -193,7 +194,11 @@ const Period = styled(Master)`
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;
+
   padding-left: 20px;
+  @media print, screen and (min-width: ${breakpoint}px) {
+    padding-left: 0;
+  }
 `
 const Position = styled.h4`
   margin: 0;
