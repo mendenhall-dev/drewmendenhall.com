@@ -5,6 +5,10 @@ export default createGlobalStyle(css`
     box-sizing: border-box;
     margin: 0;
 
+    @media print {
+      font-size: 12px;
+    }
+
     @media screen and (prefers-color-scheme: dark) {
       background: black;
       color: white;
@@ -19,11 +23,5 @@ export default createGlobalStyle(css`
   }
   a:hover {
     text-decoration: underline;
-  }
-
-  @media print {
-    body {
-      font-size: 12px;
-    }
   }
 `)
