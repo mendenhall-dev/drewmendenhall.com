@@ -1,7 +1,6 @@
 stages:
   - build
   - deploy
-  - stop
 
 variables:
   BUILD_PATH: public
@@ -76,7 +75,7 @@ stop:
     - rm /etc/nginx/sites-{available,enabled}/$HOSTNAME.conf
     - sudo letsencrypt revoke --cert-path /etc/letsencrypt/live/$HOSTNAME/cert.pem
     - sudo nginx -s reload
-  stage: stop
+  stage: deploy
   tags:
     - www-server
   variables:
