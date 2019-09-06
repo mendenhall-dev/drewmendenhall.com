@@ -81,6 +81,10 @@ const EmailLink = styled.a`
 `
 const Footer = styled.footer`
   min-height: 3em;
+  @media print {
+    min-height: 0;
+  }
+
   background: ${greyLight};
   border-top: ${strokeWidth}px solid ${strokeColor};
   @media screen and (prefers-color-scheme: dark) {
