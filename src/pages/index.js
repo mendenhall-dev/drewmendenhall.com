@@ -2,7 +2,7 @@ import 'typeface-comfortaa'
 import 'typeface-libre-baskerville'
 import React from 'react'
 import styled from 'styled-components'
-import {MailOutline as Mail} from '@material-ui/icons'
+import {MailOutline as MailIcon} from '@material-ui/icons'
 
 import GlobalStyle from '../GlobalStyle'
 import SEO from '../components/seo'
@@ -219,7 +219,7 @@ export default () => (
         <h1>Drew Mendenhall</h1>
         <Subtitle>Full-Stack Web Developer</Subtitle>
         <EmailLink href="mailto:drew@mendenhall.io">
-          <Mail /> drew@mendenhall.io
+          <MailIcon /> drew@mendenhall.io
         </EmailLink>
         <p>
           Full-stack web developer passionate about using the best tools for the
