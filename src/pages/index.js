@@ -13,7 +13,7 @@ const breakpoint = 600
 const greyDark = '#aaa'
 const grey = '#ddd'
 const greyLight = '#f8f8f8'
-const jobSpacing = '3em'
+const jobSpacing = '1em'
 const strokeWidth = 2
 
 const accentColor = blue
