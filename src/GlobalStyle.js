@@ -35,4 +35,8 @@ export default createGlobalStyle(css`
   a:hover {
     text-decoration: underline;
   }
+
+  #gatsby-noscript {
+    display: none;
+  }
 `)
