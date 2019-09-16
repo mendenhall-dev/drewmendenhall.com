@@ -21,4 +21,4 @@ rules:
   react/sort-prop-types: warn
 settings:
   react:
-    version: 16.8
+    version: detect
