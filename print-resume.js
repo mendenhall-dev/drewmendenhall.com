@@ -40,7 +40,7 @@ const renderPdf = async ({filename, html}) => {
   const page = await browser.newPage()
 
   try {
-    await page.goto(`data:text/html,${html}`)
+    await page.setContent(html)
     await page.pdf({
       path: filename,
       format: 'Letter',
