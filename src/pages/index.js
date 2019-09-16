@@ -12,7 +12,6 @@ const blue = '#75afec'
 const breakpoint = 600
 const greyDark = '#aaa'
 const grey = '#ddd'
-const greyLight = '#f8f8f8'
 const jobSpacing = '1em'
 const strokeWidth = 2
 
@@ -20,7 +19,6 @@ const accentColor = blue
 const strokeColor = grey
 
 const strokeColorDark = '#5a5a5a'
-const backgroundAccentDark = '#1a1a1a'
 
 const Container = styled.div`
   max-width: 800px;
@@ -42,10 +40,9 @@ const Header = styled.header`
   font-family: Libre Baskerville, Baskerville, serif;
   padding-top: 1rem;
 
-  background: ${greyLight};
+  background: var(--background-accent-color);
   border-bottom: ${strokeWidth}px solid ${strokeColor};
   @media screen and (prefers-color-scheme: dark) {
-    background: ${backgroundAccentDark};
     border-bottom-color: ${strokeColorDark};
   }
 
@@ -85,10 +82,9 @@ const Footer = styled.footer`
     min-height: 0;
   }
 
-  background: ${greyLight};
+  background: var(--background-accent-color);
   border-top: ${strokeWidth}px solid ${strokeColor};
   @media screen and (prefers-color-scheme: dark) {
-    background: ${backgroundAccentDark};
     border-top-color: ${strokeColorDark};
   }
 `
