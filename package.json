@@ -24,6 +24,7 @@
     "typeface-libre-baskerville": "0.0.72"
   },
   "devDependencies": {
+    "env-cmd": "^10.0.1",
     "eslint-plugin-react-hooks": "^2.0.1",
     "prettier": "^1.18.2",
     "prettier-eslint-cli": "^5.0.0"
@@ -34,10 +35,10 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build && node ./print-resume",
-    "develop": "source .env; gatsby develop --port $PORT",
+    "develop": "env-cmd --use-shell 'gatsby develop --port $PORT'",
     "format": "prettier-eslint --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "source .env; gatsby serve --port $PORT",
+    "serve": "env-cmd --use-shell 'gatsby serve --port $PORT'",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
