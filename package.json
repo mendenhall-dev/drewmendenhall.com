@@ -37,7 +37,7 @@
     "develop": "source .env; gatsby develop --port $PORT",
     "format": "prettier-eslint --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "source .env; gatsby serve --port $PORT",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
