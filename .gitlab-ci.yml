@@ -14,7 +14,7 @@ build:
       - $BUILD_PATH
   cache:
     untracked: true
-  image: alekzonder/puppeteer
+  image: buildkite/puppeteer
   script:
     - node --version
     - npm --version
