@@ -38,7 +38,7 @@
   "scripts": {
     "build": "gatsby build && node ./print-resume",
     "develop": "env-cmd --use-shell 'gatsby develop --port $PORT'",
-    "format": "prettier-eslint --write src/**/*.{js,jsx}",
+    "format": "prettier-eslint --write '**/*.{js{,on},y{,a}ml}'",
     "start": "npm run develop",
     "serve": "env-cmd --use-shell 'gatsby serve --port $PORT'",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
