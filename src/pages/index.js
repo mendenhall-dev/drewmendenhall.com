@@ -220,7 +220,7 @@ export default () => (
         <p>
           Full-stack web developer passionate about using the best tools for the
           job. I have primarily worked on ASP.NET and NodeJS back-ends, and I am
-          open to learning new languages.
+          open to learning new languages — especially Ruby, Go, and Rust.
         </p>
         <p>
           I maintain my own GitLab instance with custom docker-based CI/CD
