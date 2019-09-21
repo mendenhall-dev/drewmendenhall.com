@@ -267,12 +267,6 @@ export default () => (
             <Company>The University of Texas at Dallas</Company>
           </Detail>
         </Job>
-        <Job>
-          <Period>2006</Period>
-          <Detail>
-            <Company>Jesuit Dallas</Company>
-          </Detail>
-        </Job>
       </JobList>
     </Section>
     <Footer>
