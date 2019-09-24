@@ -25,7 +25,11 @@ const Container = styled.div`
   margin-left: 40px;
   margin-right: 20px;
 
-  @media print, screen and (min-width: ${breakpoint}px) {
+  @media print {
+    margin: 0;
+    max-width: initial;
+  }
+  @media screen and (min-width: ${breakpoint}px) {
     margin-left: 20px;
   }
   @media (min-width: 840px) {
@@ -38,7 +42,11 @@ const Container = styled.div`
 `
 const Header = styled.header`
   font-family: Libre Baskerville, Baskerville, serif;
+
   padding-top: 1rem;
+  @media print {
+    padding-top: 0;
+  }
 
   background: var(--background-accent-color);
   border-bottom: ${strokeWidth}px solid ${strokeColor};

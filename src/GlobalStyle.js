@@ -8,6 +8,9 @@ export default createGlobalStyle(css`
     }
   }
 
+  @page {
+    margin: 1in;
+  }
   html {
     background: var(--background-accent-color);
   }
