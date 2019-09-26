@@ -39,10 +39,9 @@ export default [
     company: 'Intuit',
     position: 'Front End UI Developer',
     highlights: [
-      'Constructed a one-stop web application for accountants as a composition of AngularJS modules.',
+      'Constructed a one-stop web application for accountants as a composition of AngularJS modules. Front-end built using Grunt.',
       'Architected a library of basic, reusable HTML snippets, backed by LESS styling, which follow visual design specifications, pixel-for-pixel.',
-      'Leveraged the grunt.js build system to enable and enhance rapid iteration in daily development workflow, with no compromises.',
-      'Worked as part of a medium-size scrum team which follows agile software development practices.',
+      'Worked as part of a medium-size team following Agile practices.',
     ],
   },
   {
@@ -63,13 +62,12 @@ export default [
     startDate: 'May 2012',
     endDate: 'Oct 2013',
     company: 'Customer Feedback Systems',
-    position: 'Web Application Developer and Administrator',
+    position: 'Web Application Developer',
     highlights: [
       'Designed and developed system that enables swift and reliable creation and management of surveys for CFS’s clients. Major clients include Air France and Vanguard Health Systems.',
       'Three single-page applications use knockout.js with object-oriented models to provide a rich user interface and real-time, accurate representation of data.',
       'Requests are sent to RESTful API, using ASP.NET Web API.',
       'Implemented ASP.NET Forms Security with custom Membership and Role Providers, and a self-architected claims-based system, which control users’ access to surveys.',
-      'Installed SSL certificates in IIS with HTTP Redirection to ensure all of client’s data is securely transported.',
       'Administered FTP Secure site in IIS with user-isolated folders.',
     ],
   },
