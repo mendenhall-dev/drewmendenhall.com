@@ -24,7 +24,7 @@
     "typeface-libre-baskerville": "0.0.72"
   },
   "devDependencies": {
-    "env-cmd": "^10.0.1",
+    "env-cmd": "^10.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
