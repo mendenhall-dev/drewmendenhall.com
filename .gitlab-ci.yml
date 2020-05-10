@@ -1,30 +1,38 @@
 stages:
+  - install_dependencies
   - build
   - deploy
 
 variables:
   BUILD_PATH: public
   DEPLOY_ROOT: /var/www
-  NODE_ENV: production
+
+install_dependencies:
+  artifacts:
+    paths:
+      - node_modules
+  image: buildkite/puppeteer
+  script:
+    - npm install
+  stage: install_dependencies
+  tags:
+    - docker-node
 
 build:
   artifacts:
     expire_in: 1 day
     paths:
       - $BUILD_PATH
-  cache:
-    untracked: true
   image: buildkite/puppeteer
   script:
-    - node --version
-    - npm --version
-    - NODE_ENV= npm i
     - npm run build
   stage: build
   tags:
     - docker-node
 
 .deploy: &deploy
+  dependencies:
+    - build
   environment:
     url: https://$HOSTNAME
   script:
