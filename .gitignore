@@ -1,5 +1,9 @@
 .env
 
+**/__image_snapshots__/*headed*.*
+/cypress/screenshots
+/cypress/videos
+
 # Logs
 logs
 *.log

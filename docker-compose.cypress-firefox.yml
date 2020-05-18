@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  test:
+    extends:
+      file: docker-compose.cypress.yml
+      service: test
+    command: cypress run --browser firefox --headless
+    volumes:
+      - .:/drewmendenhall.com
