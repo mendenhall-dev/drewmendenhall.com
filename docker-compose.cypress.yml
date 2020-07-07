@@ -5,6 +5,6 @@ services:
     command: cypress run --browser firefox --headless
     working_dir: /drewmendenhall.com
     env_file: .env
-    image: cypress/included:4.9.0@sha256:90046d454bca7c00d34c4095f7877661e7eade24511653eb5fe31a0ed9facbe7
+    image: cypress/included:4.10.0@sha256:3a6795b9c84d2dc15116e224c4074d8c3aa56802cf8e3f4cd91379ca7c367894
     volumes:
       - .:/drewmendenhall.com
