@@ -37,6 +37,21 @@ build:
   tags:
     - docker-node
 
+build env:
+  artifacts:
+    reports:
+      dotenv: .env
+  dependencies: []
+  except:
+    - master
+  script:
+    - MAX_CN_LENGTH=64
+    - SUBDOMAIN=$(echo $CI_COMMIT_REF_SLUG | cut -c 1-$(($MAX_CN_LENGTH - $(echo .qa.$DEPLOY_HOST | wc -m))))
+    - echo HOSTNAME=$SUBDOMAIN.qa.$DEPLOY_HOST >> .env
+  stage: build
+  tags:
+    - docker-node
+
 .deploy: &deploy
   dependencies:
     - build
@@ -58,7 +73,7 @@ deploy:
   <<: *deploy
   environment:
     name: production
-    url: https://$DEPLOY_HOST
+    url: https://$HOSTNAME
   only:
     - master
   variables:
@@ -67,17 +82,19 @@ deploy:
 
 deploy-branch:
   <<: *deploy
+  dependencies:
+    - build
+    - build env
   environment:
     name: $CI_COMMIT_REF_NAME
     on_stop: stop
-    url: https://$CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
+    url: https://$HOSTNAME
   only:
     - branches
   except:
     - master
   variables:
-    DEPLOY_PATH: $DEPLOY_ROOT/$CI_COMMIT_REF_SLUG.$DEPLOY_HOST
-    HOSTNAME: $CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
+    DEPLOY_PATH: $DEPLOY_ROOT/$HOSTNAME
 
 test:
   artifacts:
@@ -86,6 +103,7 @@ test:
     when: always
   dependencies:
     - install_dependencies
+    - build env
   script:
     - cypress run
   stage: test
@@ -94,7 +112,7 @@ test:
   except:
     - master
   variables:
-    CYPRESS_BASE_URL: https://$CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
+    CYPRESS_BASE_URL: https://$HOSTNAME
   image:
     name: cypress/included:4.9.0@sha256:90046d454bca7c00d34c4095f7877661e7eade24511653eb5fe31a0ed9facbe7
     entrypoint: ['']
@@ -110,6 +128,8 @@ test firefox:
     - cypress run --browser firefox --headless
 
 stop:
+  dependencies:
+    - build env
   environment:
     action: stop
     name: $CI_COMMIT_REF_NAME
@@ -126,6 +146,5 @@ stop:
   variables:
     CONTAINER_TAG: $CI_COMMIT_REF_SLUG
     GIT_STRATEGY: none
-    HOSTNAME: $CI_COMMIT_REF_SLUG.qa.$DEPLOY_HOST
 
   when: manual
