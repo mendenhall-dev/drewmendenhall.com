@@ -2,7 +2,6 @@ version: '2.1'
 
 services:
   test:
-    command: cypress run --browser firefox --headless
     working_dir: /drewmendenhall.com
     env_file: .env
     image: cypress/included:4.10.0@sha256:3a6795b9c84d2dc15116e224c4074d8c3aa56802cf8e3f4cd91379ca7c367894
