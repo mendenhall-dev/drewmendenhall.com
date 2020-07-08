@@ -18,7 +18,7 @@
     "puppeteer": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
     "typeface-comfortaa": "1.1.4",
     "typeface-libre-baskerville": "0.0.72"
