@@ -24,7 +24,7 @@
     "typeface-libre-baskerville": "0.0.72"
   },
   "devDependencies": {
-    "cypress": "^4.10.0",
+    "cypress": "^4.12.1",
     "cypress-dotenv": "^1.2.2",
     "cypress-plugin-snapshots": "^1.4.3",
     "env-cmd": "^10.1.0",
