@@ -236,9 +236,12 @@ const Resume = () => (
           <MailIcon /> drew@mendenhall.io
         </EmailLink>
         <p>
-          Full-stack web developer passionate about using the best tools for the
-          job. I have primarily worked on ASP.NET and NodeJS back-ends, and I am
-          open to learning new languages — especially Ruby, Go, and Rust.
+          Full-stack web developer - primarily front-end - passionate about
+          using the best tools for the job. My current toolbox includes:
+          TypeScript, ReactJS, Relay, Jest, React Testing Library, Styled Components,
+          Storybook, Webpack, DataDog, Rollbar, Split.IO,
+          GitHub, and GitHub Actions. I have experience with: NextJS, Vite, Cypress, Percy, CircleCI, GitLab, and GitLab CI.
+          I am learning Ruby on Rails and Capybara for e2e tests.
         </p>
         <p>
           I maintain my own GitLab instance with custom docker-based CI/CD
