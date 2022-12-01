@@ -244,10 +244,6 @@ const Resume = () => (
           I am learning Ruby on Rails and Capybara for e2e tests.
         </p>
         <p>
-          I maintain my own GitLab instance with custom docker-based CI/CD
-          pipelines for personal projects.
-        </p>
-        <p>
           I enjoy envisioning and building apps that not only fulfill users'
           wants and needs, but also deliver low-friction, polished, and
           sometimes magical experiences.
