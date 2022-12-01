@@ -214,7 +214,7 @@ const Position = styled.h4`
   margin: 0;
 `
 
-export default () => (
+const Resume = () => (
   <React.Fragment>
     <GlobalStyle />
     <SEO title="Resume" keywords={['resume', 'software', 'web', 'developer']} />
@@ -282,3 +282,5 @@ export default () => (
     </Footer>
   </React.Fragment>
 )
+
+export default Resume
