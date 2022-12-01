@@ -248,9 +248,9 @@ const Resume = () => (
           pipelines for personal projects.
         </p>
         <p>
-          I enjoy envisioning and building something that not only fulfills
-          users' wants and needs, but also delivers a low-friction, polished,
-          and sometimes magical experience.
+          I enjoy envisioning and building apps that not only fulfill users'
+          wants and needs, but also deliver low-friction, polished, and
+          sometimes magical experiences.
         </p>
       </Container>
     </Header>
