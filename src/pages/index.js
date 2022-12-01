@@ -217,7 +217,17 @@ const Position = styled.h4`
 const Resume = () => (
   <React.Fragment>
     <GlobalStyle />
-    <SEO title="Resume" keywords={['resume', 'software', 'web', 'developer']} />
+    <SEO
+      title="Resume"
+      keywords={[
+        'resume',
+        'software',
+        'web',
+        'developer',
+        'front-end',
+        'full-stack',
+      ]}
+    />
     <Header>
       <Container>
         <h1>Drew Mendenhall</h1>
