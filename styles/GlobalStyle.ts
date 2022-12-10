@@ -1,6 +1,10 @@
-import {createGlobalStyle, css} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-export default createGlobalStyle(css`
+import fontFaces from './fontFaces'
+
+const GlobalStyle = createGlobalStyle`
+  ${fontFaces}
+
   :root {
     --background-accent-color: #f8f8f8;
     @media screen and (prefers-color-scheme: dark) {
@@ -38,8 +42,6 @@ export default createGlobalStyle(css`
   a:hover {
     text-decoration: underline;
   }
+`
 
-  #gatsby-noscript {
-    display: none;
-  }
-`)
+export default GlobalStyle

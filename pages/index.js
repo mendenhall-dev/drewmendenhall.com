@@ -1,12 +1,12 @@
 import 'typeface-comfortaa'
 import 'typeface-libre-baskerville'
+import Head from 'next/head'
 import React from 'react'
 import styled from 'styled-components'
-import {MailOutline as MailIcon} from '@material-ui/icons'
+// import {MailOutline as MailIcon} from '@material-ui/icons'
 
-import GlobalStyle from '../GlobalStyle'
-import SEO from '../components/seo'
-import jobs from '../jobs'
+import GlobalStyle from '../styles/GlobalStyle'
+import jobs from '../modules/jobs'
 
 const blue = '#75afec'
 const breakpoint = 600
@@ -217,23 +217,27 @@ const Position = styled.h4`
 const Resume = () => (
   <React.Fragment>
     <GlobalStyle />
-    <SEO
-      title="Resume"
-      keywords={[
-        'resume',
-        'software',
-        'web',
-        'developer',
-        'front-end',
-        'full-stack',
-      ]}
-    />
+    <Head>
+      <title>Drew Mendenhall - Résumé</title>
+      <meta
+        content={[
+          'resume',
+          'software',
+          'web',
+          'developer',
+          'front-end',
+          'full-stack',
+        ].join(',')}
+        name="keywords"
+      />
+    </Head>
     <Header>
       <Container>
         <h1>Drew Mendenhall</h1>
         <Subtitle>Full-Stack Web Developer</Subtitle>
         <EmailLink href="mailto:drew@mendenhall.io">
-          <MailIcon /> drew@mendenhall.io
+          drew@mendenhall.io
+          {/* <MailIcon /> drew@mendenhall.io */}
         </EmailLink>
         <p>
           Full-stack web developer - primarily front-end - passionate about

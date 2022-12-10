@@ -5,25 +5,16 @@
   "version": "0.1.0",
   "author": "Drew Mendenhall <drew@mendenhall.io>",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^4.25.0",
-    "gatsby-plugin-manifest": "^4.25.0",
-    "gatsby-plugin-offline": "^5.15.0",
-    "gatsby-plugin-react-helmet": "^5.25.0",
-    "gatsby-plugin-styled-components": "^5.25.0",
-    "gatsby-source-filesystem": "^4.25.0",
-    "prop-types": "^15.7.2",
+    "next": "^13.0.6",
     "puppeteer": "^19.4.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
     "typeface-comfortaa": "1.1.4",
     "typeface-libre-baskerville": "0.0.72"
   },
   "devDependencies": {
+    "@types/react": "18.0.26",
     "cypress": "^4.12.1",
     "cypress-dotenv": "^1.2.2",
     "cypress-plugin-snapshots": "^1.4.3",
@@ -33,18 +24,15 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "prettier": "^1.19.1",
-    "prettier-eslint-cli": "^5.0.0"
+    "prettier-eslint-cli": "^5.0.0",
+    "typescript": "^4.8.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && node ./print-resume",
-    "develop": "env-cmd --use-shell 'gatsby develop --port $PORT'",
+    "build": "next build && node ./print-resume",
+    "dev": "env-cmd --use-shell 'next dev --port ${PORT:-3000}'",
     "format": "prettier-eslint --write '**/*.{js{,on},y{,a}ml}'",
-    "start": "npm run develop",
-    "serve": "env-cmd --use-shell 'gatsby serve --port $PORT'",
+    "start": "next start",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
