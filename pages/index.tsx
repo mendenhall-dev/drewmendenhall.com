@@ -8,6 +8,8 @@ import styled from 'styled-components'
 import GlobalStyle from '../styles/GlobalStyle'
 import jobs from '../modules/jobs'
 
+import type {NextPage} from 'next'
+
 const blue = '#75afec'
 const breakpoint = 600
 const greyDark = '#aaa'
@@ -214,7 +216,7 @@ const Position = styled.h4`
   margin: 0;
 `
 
-const Resume = () => (
+const Resume: NextPage = () => (
   <Fragment>
     <GlobalStyle />
     <Head>
