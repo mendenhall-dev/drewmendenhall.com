@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {Fragment} from 'react'
 import {StyleSheetManager} from 'styled-components'
 
 import type {AppProps} from 'next/app'
@@ -8,7 +9,7 @@ import GlobalStyle from '../styles/GlobalStyle'
 function MyApp({Component, pageProps}: AppProps) {
   return (
     <StyleSheetManager disableVendorPrefixes>
-      <React.Fragment>
+      <Fragment>
         <GlobalStyle />
         <Head>
           <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -16,7 +17,7 @@ function MyApp({Component, pageProps}: AppProps) {
           <link rel="apple-touch-icon" href="/favicon-180.png" />
         </Head>
         <Component {...pageProps} />
-      </React.Fragment>
+      </Fragment>
     </StyleSheetManager>
   )
 }

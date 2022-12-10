@@ -1,7 +1,7 @@
 import 'typeface-comfortaa'
 import 'typeface-libre-baskerville'
 import Head from 'next/head'
-import React from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
 // import {MailOutline as MailIcon} from '@material-ui/icons'
 
@@ -215,7 +215,7 @@ const Position = styled.h4`
 `
 
 const Resume = () => (
-  <React.Fragment>
+  <Fragment>
     <GlobalStyle />
     <Head>
       <title>Drew Mendenhall - Résumé</title>
@@ -294,7 +294,7 @@ const Resume = () => (
     <Footer>
       <Container />
     </Footer>
-  </React.Fragment>
+  </Fragment>
 )
 
 export default Resume
