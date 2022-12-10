@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background: white;
     box-sizing: border-box;
     margin: 0;
 
