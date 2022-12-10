@@ -1964,7 +1964,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-plugin-snapshots@npm:^1.4.3":
+"cypress-plugin-snapshots@npm:^1.4.4":
   version: 1.4.4
   resolution: "cypress-plugin-snapshots@npm:1.4.4"
   dependencies:
@@ -2228,7 +2228,7 @@ __metadata:
     "@types/react": 18.0.26
     cypress: ^4.12.1
     cypress-dotenv: ^1.2.2
-    cypress-plugin-snapshots: ^1.4.3
+    cypress-plugin-snapshots: ^1.4.4
     dotenv: ^8.6.0
     env-cmd: ^10.1.0
     eslint: ^8.29.0
