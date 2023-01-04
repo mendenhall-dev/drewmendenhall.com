@@ -46,7 +46,3 @@ next-env.d.ts
 .env
 
 Caddyfile.local*
-
-**/__image_snapshots__/*headed*.*
-/cypress/screenshots
-/cypress/videos
