@@ -1,10 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 
-import fontFaces from './fontFaces'
-
 const GlobalStyle = createGlobalStyle`
-  ${fontFaces}
-
   :root {
     --background-accent-color: #f8f8f8;
     @media screen and (prefers-color-scheme: dark) {
