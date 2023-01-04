@@ -4,6 +4,6 @@ services:
   test:
     working_dir: /drewmendenhall.com
     env_file: .env
-    image: cypress/included:4.10.0@sha256:3a6795b9c84d2dc15116e224c4074d8c3aa56802cf8e3f4cd91379ca7c367894
+    image: cypress/included:12.3.0@sha256:86e3bff9634b85a5239a65974ac3c98f51277a8e1519fbd57b5e528f55ab8bf7
     volumes:
       - .:/drewmendenhall.com
