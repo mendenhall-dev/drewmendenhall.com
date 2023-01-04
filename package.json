@@ -19,7 +19,7 @@
     "@types/react": "18.0.26",
     "@types/styled-components": "^5.1.26",
     "cypress": "^4.12.1",
-    "cypress-dotenv": "^1.2.2",
+    "cypress-dotenv": "^2.0.0",
     "cypress-plugin-snapshots": "^1.4.4",
     "dotenv": "^8.6.0",
     "env-cmd": "^10.1.0",
