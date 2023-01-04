@@ -1209,7 +1209,7 @@ __metadata:
     react-dom: ^18.2.0
     styled-components: ^5.3.6
     typeface-comfortaa: 1.1.13
-    typeface-libre-baskerville: 0.0.72
+    typeface-libre-baskerville: 1.1.13
     typescript: ^4.9.4
   languageName: unknown
   linkType: soft
@@ -3313,10 +3313,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typeface-libre-baskerville@npm:0.0.72":
-  version: 0.0.72
-  resolution: "typeface-libre-baskerville@npm:0.0.72"
-  checksum: bd75c6cbcd226c3619cb22c6f7c0018e3f8fc7d6be5c7597799d6a7826533c1afa3cf5c0099b1acbf75f1002ebfc5d91a9304ca6981d07e9069b56b21949e324
+"typeface-libre-baskerville@npm:1.1.13":
+  version: 1.1.13
+  resolution: "typeface-libre-baskerville@npm:1.1.13"
+  checksum: 9f7e803397290733b0d9aa591025abf14c033f2bd88e1dfa075c85b2821815d064462198f9d6b40027a32104ade884ddd5e030dba8d831169317dcbb65a5c025
   languageName: node
   linkType: hard
 
