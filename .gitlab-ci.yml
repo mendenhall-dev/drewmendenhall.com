@@ -114,7 +114,7 @@ test:
   variables:
     CYPRESS_BASE_URL: https://$HOSTNAME
   image:
-    name: cypress/included:4.10.0@sha256:3a6795b9c84d2dc15116e224c4074d8c3aa56802cf8e3f4cd91379ca7c367894
+    name: cypress/included:4.12.1@sha256:9c8399bb8dff44733269bdc543e0b92204ca028105ac653f24554b1c02562483
     entrypoint: ['']
   tags:
     - docker-node
