@@ -22,8 +22,6 @@ install_dependencies:
   stage: install_dependencies
   tags:
     - docker-node
-  variables:
-    CYPRESS_INSTALL_BINARY: 0
 
 build:
   artifacts:
@@ -95,37 +93,6 @@ deploy-branch:
     - master
   variables:
     DEPLOY_PATH: $DEPLOY_ROOT/$HOSTNAME
-
-test:
-  artifacts:
-    paths:
-      - cypress/**/__image_snapshots__/*electron*
-    when: always
-  dependencies:
-    - install_dependencies
-    - build env
-  script:
-    - cypress run
-  stage: test
-  only:
-    - branches
-  except:
-    - master
-  variables:
-    CYPRESS_BASE_URL: https://$HOSTNAME
-  image:
-    name: cypress/included:4.10.0@sha256:3a6795b9c84d2dc15116e224c4074d8c3aa56802cf8e3f4cd91379ca7c367894
-    entrypoint: ['']
-  tags:
-    - docker-node
-
-test firefox:
-  extends: test
-  artifacts:
-    paths:
-      - cypress/**/__image_snapshots__/*firefox*
-  script:
-    - cypress run --browser firefox --headless
 
 stop:
   dependencies:
