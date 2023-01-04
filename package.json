@@ -12,7 +12,7 @@
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
     "typeface-comfortaa": "1.1.13",
-    "typeface-libre-baskerville": "0.0.72"
+    "typeface-libre-baskerville": "1.1.13"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
