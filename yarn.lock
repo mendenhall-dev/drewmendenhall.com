@@ -1208,7 +1208,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     styled-components: ^5.3.6
-    typeface-comfortaa: 1.1.4
+    typeface-comfortaa: 1.1.13
     typeface-libre-baskerville: 0.0.72
     typescript: ^4.9.4
   languageName: unknown
@@ -3306,10 +3306,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typeface-comfortaa@npm:1.1.4":
-  version: 1.1.4
-  resolution: "typeface-comfortaa@npm:1.1.4"
-  checksum: aebdd6af715e3528d6a487ffb822f51b7a9c41eab88fb762edd36379c7f252d21bd7120ec8a3106269075e6870b03bb5e971d429b65cc9520e2e550405c742af
+"typeface-comfortaa@npm:1.1.13":
+  version: 1.1.13
+  resolution: "typeface-comfortaa@npm:1.1.13"
+  checksum: 8a34c3f49e8946ec5665605ef5cca106be24390c725db89fe4deb81d64d1ff646ac781cfb2e7771c1e9aeba8d67df5dd3c016943c6b0ec6dd7eba733b8f5426d
   languageName: node
   linkType: hard
 
