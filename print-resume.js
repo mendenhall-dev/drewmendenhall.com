@@ -59,12 +59,12 @@ const renderPdf = async ({filename, html}) => {
 const render = async () => {
   // await renderHtml()
   await renderPdf({
-    filename: './public/drew-mendenhall-resume.pdf',
-    html: readFileSync('./public/index.html', 'utf8').replace(
+    filename: './out/drew-mendenhall-resume.pdf',
+    html: readFileSync('./out/index.html', 'utf8').replace(
       /url\(((?!data:).+?)\)/g,
       (match, url) =>
         `url(data:;base64,${readFileSync(
-          path.join('./public', url),
+          path.join('./out', url),
           'base64',
         )})`,
     ),
