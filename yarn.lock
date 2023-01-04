@@ -1034,6 +1034,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:18.11.18":
+  version: 18.11.18
+  resolution: "@types/node@npm:18.11.18"
+  checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
+  languageName: node
+  linkType: hard
+
 "@types/prettier@npm:^2.6.0":
   version: 2.7.1
   resolution: "@types/prettier@npm:2.7.1"
@@ -2246,6 +2253,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
+    "@types/node": 18.11.18
     "@types/react": 18.0.26
     "@types/styled-components": ^5.1.26
     cypress: ^4.12.1
