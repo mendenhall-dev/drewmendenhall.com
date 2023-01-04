@@ -33,7 +33,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "next build && node ./print-resume",
+    "build": "next build && next export && node ./print-resume",
     "dev": "env-cmd --use-shell 'next dev --port ${PORT:-3000}'",
     "format": "prettier-eslint --write '**/*.{js{,on},mjs,y{,a}ml,ts,tsx}'",
     "start": "next start",
