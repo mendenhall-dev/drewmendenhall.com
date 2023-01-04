@@ -32,7 +32,7 @@ jobs:
       - run: yarn next build
       - run: yarn next export
       - run: mv out _site
-      - uses: actions/upload-pages-artifact@a597aecd27af1cf14095ccaa29169358e3d91e28 # tag=v1.0.4
+      - uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf # v1.0.7
 
   deploy:
     needs: build
