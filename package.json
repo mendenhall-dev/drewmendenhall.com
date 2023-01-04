@@ -4,7 +4,7 @@
   "description": "The source for my personal web site.",
   "version": "0.1.0",
   "author": "Drew Mendenhall <drew@mendenhall.io>",
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@3.3.1",
   "dependencies": {
     "next": "^13.1.1",
     "puppeteer": "^19.4.1",
