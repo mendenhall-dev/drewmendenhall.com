@@ -28,6 +28,9 @@ jobs:
     env:
       HOSTNAME: ${{ github.ref_name }}.staging.drewmendenhall.com
       DEPLOY_ROOT: /var/www
+    environment:
+      name: ${{ github.ref_name }}
+      url: https://${{ env.HOSTNAME }}
     needs: build
     runs-on: [self-hosted, www]
     steps:
