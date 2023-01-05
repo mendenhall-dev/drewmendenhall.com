@@ -1,0 +1,45 @@
+name: build-and-deploy-staging
+
+on:
+  push:
+    branches-ignore:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
+      - uses: ./.github/actions/setup-node
+      - uses: actions/cache@4723a57e26efda3a62cbde1812113b730952852d # v3.2.2
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+      - run: yarn next build
+      - run: yarn next export
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: out
+
+  deploy:
+    env:
+      HOSTNAME: ${{ github.ref_name }}.staging.drewmendenhall.com
+      DEPLOY_ROOT: /var/www
+    needs: build
+    runs-on: [self-hosted, www]
+    steps:
+      - run: echo "DEPLOY_PATH=$DEPLOY_ROOT/$HOSTNAME" >> $GITHUB_ENV
+      - uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: ${{ env.DEPLOY_PATH }}
+      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
+      - run: envsubst < deploy/site.bootstrap.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
+      - run: ln -s -fn ../sites-available/$HOSTNAME.conf /etc/nginx/sites-enabled/$HOSTNAME.conf
+      - run: sudo nginx -s reload
+      - run: sudo certbot certonly --nginx --domain $HOSTNAME --domain www.$HOSTNAME
+      - run: envsubst < deploy/site.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
+      - run: sudo nginx -s reload
