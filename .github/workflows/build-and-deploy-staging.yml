@@ -40,6 +40,6 @@ jobs:
       - run: envsubst < deploy/site.bootstrap.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
       - run: ln -s -fn ../sites-available/$HOSTNAME.conf /etc/nginx/sites-enabled/$HOSTNAME.conf
       - run: sudo nginx -s reload
-      - run: sudo certbot certonly --nginx --domain $HOSTNAME --domain www.$HOSTNAME
+      - run: sudo certbot certonly --nginx --domain $HOSTNAME --domain www.$HOSTNAME --non-interactive
       - run: envsubst < deploy/site.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
       - run: sudo nginx -s reload
