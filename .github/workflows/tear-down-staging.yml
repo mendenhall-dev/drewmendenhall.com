@@ -1,0 +1,30 @@
+name: teardown-staging
+
+on:
+  delete:
+  workflow_dispatch:
+
+jobs:
+  tear-down-site:
+    env:
+      HOSTNAME: ${{ github.ref_name }}.staging.drewmendenhall.com
+      DEPLOY_ROOT: /var/www
+    if: github.event.ref_type == 'branch' || github.event_name == 'workflow_dispatch'
+    runs-on: [self-hosted, www]
+    steps:
+      - run: echo "DEPLOY_PATH=$DEPLOY_ROOT/$HOSTNAME" >> $GITHUB_ENV
+      - run: rm -rf $DEPLOY_PATH
+      - run: rm /etc/nginx/sites-{available,enabled}/$HOSTNAME.conf
+      - run: sudo certbot revoke --cert-path /etc/letsencrypt/live/$HOSTNAME/cert.pem --delete-after-revoke
+      - run: sudo nginx -s reload
+  delete-github-environment:
+    if: github.event.ref_type == 'branch' || github.event_name == 'workflow_dispatch'
+    permissions:
+      deployments: write
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: strumwolf/delete-deployment-environment@v2.2.3
+        with:
+          environment: ${{ github.ref_name }}
+          onlyRemoveDeployments: true
+          token: ${{ github.token }}
