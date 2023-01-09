@@ -1,9 +1,6 @@
 name: build-and-deploy
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/build-and-deploy.yml
   push:
     branches:
       - main
