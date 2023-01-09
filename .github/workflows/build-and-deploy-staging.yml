@@ -37,6 +37,7 @@ jobs:
       - run: echo "REF_SLUG=$(echo ${{ github.ref_name }} | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | cut -c 1-23 | sed -r s/-$//)" >> $GITHUB_ENV
       - run: echo "HOSTNAME=$REF_SLUG.$STAGING_DOMAIN" >> $GITHUB_ENV
       - run: echo "DEPLOY_PATH=$DEPLOY_ROOT/$HOSTNAME" >> $GITHUB_ENV
+      - run: echo 'DOLLAR=$' >> $GITHUB_ENV
       - uses: actions/download-artifact@v3
         with:
           name: build-artifact
