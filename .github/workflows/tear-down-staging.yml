@@ -1,4 +1,4 @@
-name: teardown-staging
+name: tear-down-staging
 
 on:
   delete:
@@ -7,11 +7,14 @@ on:
 jobs:
   tear-down-site:
     env:
-      HOSTNAME: ${{ github.ref_name }}.staging.drewmendenhall.com
+      STAGING_DOMAIN: staging.drewmendenhall.com
       DEPLOY_ROOT: /var/www
     if: github.event.ref_type == 'branch' || github.event_name == 'workflow_dispatch'
     runs-on: [self-hosted, www]
     steps:
+      - run: echo "BRANCH_NAME=$(echo ${{ github.event_name == 'delete' && github.event.ref || github.ref_name }} | sed -r 's|^refs/heads/||g')" >> $GITHUB_ENV
+      - run: echo "REF_SLUG=$(echo $BRANCH_NAME | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | cut -c 1-23 | sed -r s/-$//)" >> $GITHUB_ENV
+      - run: echo "HOSTNAME=$REF_SLUG.$STAGING_DOMAIN" >> $GITHUB_ENV
       - run: echo "DEPLOY_PATH=$DEPLOY_ROOT/$HOSTNAME" >> $GITHUB_ENV
       - run: rm -rf $DEPLOY_PATH
       - run: rm /etc/nginx/sites-{available,enabled}/$HOSTNAME.conf
@@ -23,8 +26,9 @@ jobs:
       deployments: write
     runs-on: ubuntu-20.04
     steps:
+      - run: echo "BRANCH_NAME=$(echo ${{ github.event.name == 'delete' && github.event.ref || github.ref_name }} | sed -r 's|^refs/heads/||g')" >> $GITHUB_ENV
       - uses: strumwolf/delete-deployment-environment@v2.2.3
         with:
-          environment: ${{ github.ref_name }}
+          environment: ${{ env.BRANCH_NAME }}
           onlyRemoveDeployments: true
           token: ${{ github.token }}
