@@ -18,7 +18,7 @@ jobs:
       - run: echo "DEPLOY_PATH=$DEPLOY_ROOT/$HOSTNAME" >> $GITHUB_ENV
       - run: rm -rf $DEPLOY_PATH
       - run: rm /etc/nginx/sites-{available,enabled}/$HOSTNAME.conf
-      - run: sudo certbot revoke --cert-path /etc/letsencrypt/live/$HOSTNAME/cert.pem --delete-after-revoke
+      - run: sudo certbot revoke --cert-name $HOSTNAME --delete-after-revoke
       - run: sudo nginx -s reload
   delete-github-environment:
     if: github.event.ref_type == 'branch' || github.event_name == 'workflow_dispatch'
