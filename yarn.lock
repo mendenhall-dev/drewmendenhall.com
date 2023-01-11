@@ -1232,7 +1232,7 @@ __metadata:
     prettier: ^2.8.2
     prettier-eslint: ^15.0.1
     prettier-eslint-cli: ^7.1.0
-    puppeteer: ^19.5.0
+    puppeteer: ^19.5.1
     react: ^18.2.0
     react-dom: ^18.2.0
     styled-components: ^5.3.6
@@ -2828,9 +2828,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.5.0":
-  version: 19.5.0
-  resolution: "puppeteer-core@npm:19.5.0"
+"puppeteer-core@npm:19.5.1":
+  version: 19.5.1
+  resolution: "puppeteer-core@npm:19.5.1"
   dependencies:
     cross-fetch: 3.1.5
     debug: 4.3.4
@@ -2842,20 +2842,20 @@ __metadata:
     tar-fs: 2.1.1
     unbzip2-stream: 1.4.3
     ws: 8.11.0
-  checksum: 0cdac5c54dc9933f4e819ed57ecaa7dc93861937606ba1fab87365c4935a4709543f472e4c9f7eb3c09bf414dceee61acf41c983ab000f06bcf7339615082cd1
+  checksum: 155c5fef84abb0631f830001bb10c5391bfb5ef6bc77cd2b8d9b5c95dcc5fa36a0ffdfbbf41e17daec773a1d5145205236a6abb03d30e0cb53e25f908753acc0
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^19.5.0":
-  version: 19.5.0
-  resolution: "puppeteer@npm:19.5.0"
+"puppeteer@npm:^19.5.1":
+  version: 19.5.1
+  resolution: "puppeteer@npm:19.5.1"
   dependencies:
     cosmiconfig: 8.0.0
     https-proxy-agent: 5.0.1
     progress: 2.0.3
     proxy-from-env: 1.1.0
-    puppeteer-core: 19.5.0
-  checksum: 4193e7e5f6b8bb42fae823f836e37058410d14fd92e384fcd1a361dbeab9a753065f97bcecad29bdd5e574404b75ccaf26e8a7598514c8e36265a3b1d9663eec
+    puppeteer-core: 19.5.1
+  checksum: dca347cc5af2aa7fcfeecbac6dedad696b6ae4dc970dad55c57c934573551752f07c3a16c946d4280b20ae3db25a9a46844db901ff05b8117e112f04bb336ece
   languageName: node
   linkType: hard
 
