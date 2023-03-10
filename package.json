@@ -6,7 +6,7 @@
   "author": "Drew Mendenhall <drew@mendenhall.io>",
   "packageManager": "yarn@3.3.1",
   "dependencies": {
-    "next": "^13.2.3",
+    "next": "^13.2.4",
     "puppeteer": "^19.7.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
