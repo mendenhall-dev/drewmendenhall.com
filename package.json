@@ -15,7 +15,7 @@
     "typeface-libre-baskerville": "1.1.13"
   },
   "devDependencies": {
-    "@types/node": "18.15.8",
+    "@types/node": "18.15.9",
     "@types/react": "18.0.29",
     "@types/styled-components": "^5.1.26",
     "dotenv": "^16.0.3",
