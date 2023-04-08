@@ -5,7 +5,7 @@
 // import Resume from './src/pages'
 
 const path = require('path')
-const puppeteer = require('puppeteer')
+const {chromium} = require('playwright-core')
 const {readFileSync} = require('fs')
 
 // const renderHtml = async () => {
@@ -32,11 +32,7 @@ const {readFileSync} = require('fs')
 //   ).replace(/\n\s*/g, '')
 // }
 const renderPdf = async ({filename, html}) => {
-  const browser = await puppeteer.launch({
-    // ...(!__DEV__ && {args: ['--no-sandbox', '--disable-setuid-sandbox']}),
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    // executablePath: config.chromiumExecutablePath,
-  })
+  const browser = await chromium.launch()
   const page = await browser.newPage()
 
   try {
