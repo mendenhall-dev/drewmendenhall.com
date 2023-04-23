@@ -1,6 +1,7 @@
+import 'dotenv/config'
 import { defineConfig, devices } from '@playwright/test'
 
-const url = 'https://drewmendenhall.localhost'
+const url = process.env.BASE_URL
 
 export default defineConfig({
   testDir: './tests',
