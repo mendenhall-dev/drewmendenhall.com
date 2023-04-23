@@ -1,0 +1,21 @@
+name: playwright
+
+on: deployment_status
+
+jobs:
+  playwright:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
+      - uses: ./.github/actions/setup-node
+      - run: yarn playwright install --with-deps
+      - run: yarn playwright test
+        env:
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 30
