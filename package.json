@@ -15,7 +15,7 @@
     "typeface-libre-baskerville": "1.1.13"
   },
   "devDependencies": {
-    "@playwright/test": "^1.32.1",
+    "@playwright/test": "^1.32.3",
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",
     "@types/styled-components": "^5.1.26",

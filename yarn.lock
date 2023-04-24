@@ -461,7 +461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:^1.32.1":
+"@playwright/test@npm:^1.32.3":
   version: 1.32.3
   resolution: "@playwright/test@npm:1.32.3"
   dependencies:
@@ -1410,7 +1410,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
-    "@playwright/test": ^1.32.1
+    "@playwright/test": ^1.32.3
     "@types/node": 18.16.0
     "@types/react": 18.0.38
     "@types/styled-components": ^5.1.26
