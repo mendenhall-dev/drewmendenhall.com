@@ -6,13 +6,13 @@
   "author": "Drew Mendenhall <drew@mendenhall.io>",
   "packageManager": "yarn@3.5.0",
   "dependencies": {
+    "@fontsource/comfortaa": "^4.5.11",
+    "@fontsource/libre-baskerville": "^4.5.10",
     "next": "^13.3.1",
     "playwright-core": "^1.32.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.10",
-    "typeface-comfortaa": "1.1.13",
-    "typeface-libre-baskerville": "1.1.13"
+    "styled-components": "^5.3.10"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.3",

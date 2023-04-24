@@ -224,6 +224,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/comfortaa@npm:^4.5.11":
+  version: 4.5.11
+  resolution: "@fontsource/comfortaa@npm:4.5.11"
+  checksum: 48c7fcaa396d41fcd8923df29da76ea8e9d4c31e55e096bb99248704d55b4489fc4a897a893dc792966c15ae2d44d6393f657def190d3d420e8f279486ac9582
+  languageName: node
+  linkType: hard
+
+"@fontsource/libre-baskerville@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/libre-baskerville@npm:4.5.10"
+  checksum: 3c05fecdfb8e299ddb1729433258ace2faf0a1a527d9c554f986d1b42c1ca43673d708d0c9766829d7520d9b0564703b8d0cd89fd4fd6704c06347d60087f66d
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -1304,6 +1318,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
+    "@fontsource/comfortaa": ^4.5.11
+    "@fontsource/libre-baskerville": ^4.5.10
     "@playwright/test": ^1.32.3
     "@types/node": 18.16.1
     "@types/react": 18.2.0
@@ -1321,8 +1337,6 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     styled-components: ^5.3.10
-    typeface-comfortaa: 1.1.13
-    typeface-libre-baskerville: 1.1.13
     typescript: ^5.0.4
   languageName: unknown
   linkType: soft
@@ -3635,20 +3649,6 @@ __metadata:
   version: 1.4.0
   resolution: "type-fest@npm:1.4.0"
   checksum: b011c3388665b097ae6a109a437a04d6f61d81b7357f74cbcb02246f2f5bd72b888ae33631b99871388122ba0a87f4ff1c94078e7119ff22c70e52c0ff828201
-  languageName: node
-  linkType: hard
-
-"typeface-comfortaa@npm:1.1.13":
-  version: 1.1.13
-  resolution: "typeface-comfortaa@npm:1.1.13"
-  checksum: 8a34c3f49e8946ec5665605ef5cca106be24390c725db89fe4deb81d64d1ff646ac781cfb2e7771c1e9aeba8d67df5dd3c016943c6b0ec6dd7eba733b8f5426d
-  languageName: node
-  linkType: hard
-
-"typeface-libre-baskerville@npm:1.1.13":
-  version: 1.1.13
-  resolution: "typeface-libre-baskerville@npm:1.1.13"
-  checksum: 9f7e803397290733b0d9aa591025abf14c033f2bd88e1dfa075c85b2821815d064462198f9d6b40027a32104ade884ddd5e030dba8d831169317dcbb65a5c025
   languageName: node
   linkType: hard
 

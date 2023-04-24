@@ -1,5 +1,5 @@
-import 'typeface-comfortaa'
-import 'typeface-libre-baskerville'
+import '@fontsource/comfortaa'
+import '@fontsource/libre-baskerville'
 import Head from 'next/head'
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
