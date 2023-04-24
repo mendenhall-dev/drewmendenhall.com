@@ -9,19 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
       - uses: ./.github/actions/setup-node
-      - run: |
-          PLAYWRIGHT_VERSION=`yarn info @playwright/test --name-only | cut -d @ -f 3 | cut -d : -f 2`
-          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
-        id: playwright-version
-      - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
-        id: playwright-binaries
-        env:
-          PLAYWRIGHT_VERSION: env.PLAYWRIGHT_VERSION
-        with:
-          key: ${{ runner.os }}-playwright-binaries-${{ env.PLAYWRIGHT_VERSION }}
-          path: ~/.cache/ms-playwright
-      - run: yarn playwright install --with-deps
-        if: steps.playwright-binaries.outputs.cache-hit != 'true'
+      - uses: ./.github/actions/setup-playwright
       - run: yarn playwright test
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
