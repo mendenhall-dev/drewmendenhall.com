@@ -4,9 +4,9 @@
 //
 // import Resume from './src/pages'
 
-const path = require('path')
-const {chromium} = require('playwright-core')
-const {readFileSync} = require('fs')
+import path from 'path'
+import {chromium} from 'playwright-core'
+import {readFileSync} from 'fs'
 
 // const renderHtml = async () => {
 //   // if (__DEV__) css = generateCSS()
