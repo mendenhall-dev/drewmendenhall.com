@@ -9,7 +9,7 @@
   "dependencies": {
     "@fontsource/comfortaa": "^4.5.11",
     "@fontsource/libre-baskerville": "^4.5.10",
-    "next": "^13.3.1",
+    "next": "^13.3.2",
     "playwright-core": "^1.32.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
