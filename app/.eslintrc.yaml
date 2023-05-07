@@ -1,9 +1,3 @@
-parserOptions:
-  ecmaFeatures:
-    jsx: true
-plugins:
-  - react
-  - react-hooks
 rules:
   react/jsx-boolean-value: warn
   react/jsx-closing-bracket-location: warn
@@ -12,12 +6,11 @@ rules:
   react/jsx-indent-props: [warn, 2]
   react/jsx-no-undef: error
   react/jsx-uses-react: warn
-  react/jsx-uses-vars: warn
   react/jsx-wrap-multilines: warn
   react/no-direct-mutation-state: error
   react/no-multi-comp: warn
+  react/no-unescaped-entities: [error, {forbid: ['>', '}']}]
   react/no-unknown-property: error
-  react/react-in-jsx-scope: error
   react/sort-prop-types: warn
 settings:
   react:

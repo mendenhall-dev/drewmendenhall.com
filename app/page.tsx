@@ -1,3 +1,5 @@
+'use client'
+
 import '@fontsource/comfortaa'
 import '@fontsource/libre-baskerville'
 import Head from 'next/head'
