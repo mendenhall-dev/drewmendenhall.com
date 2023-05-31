@@ -20,7 +20,7 @@
     "@types/node": "18.16.16",
     "@types/react": "18.2.2",
     "@types/styled-components": "^5.1.26",
-    "dotenv": "^16.1.0",
+    "dotenv": "^16.1.1",
     "env-cmd": "^10.1.0",
     "eslint": "^8.41.0",
     "eslint-plugin-react": "^7.32.2",
