@@ -255,10 +255,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/libre-baskerville@npm:^4.5.10":
-  version: 4.5.10
-  resolution: "@fontsource/libre-baskerville@npm:4.5.10"
-  checksum: 3c05fecdfb8e299ddb1729433258ace2faf0a1a527d9c554f986d1b42c1ca43673d708d0c9766829d7520d9b0564703b8d0cd89fd4fd6704c06347d60087f66d
+"@fontsource/libre-baskerville@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@fontsource/libre-baskerville@npm:5.0.3"
+  checksum: cde22ed6aeb75ed77bb3cfd8ed2a6a8c169beb9efe3b13c72252219e313a71951e68c0717072bcc4c7a1b4ab58bcdbfb881e6aabe5c60733bb81109d776a35b6
   languageName: node
   linkType: hard
 
@@ -1354,7 +1354,7 @@ __metadata:
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
     "@fontsource/comfortaa": ^4.5.11
-    "@fontsource/libre-baskerville": ^4.5.10
+    "@fontsource/libre-baskerville": ^5.0.3
     "@playwright/test": ^1.32.3
     "@types/node": 18.16.18
     "@types/react": 18.2.12
