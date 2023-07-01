@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.32.3",
-    "@types/node": "18.16.18",
+    "@types/node": "18.16.19",
     "@types/react": "18.2.14",
     "@types/styled-components": "^5.1.26",
     "dotenv": "^16.3.1",
