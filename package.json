@@ -7,8 +7,8 @@
   "packageManager": "yarn@3.6.0",
   "type": "module",
   "dependencies": {
-    "@fontsource/comfortaa": "^5.0.3",
-    "@fontsource/libre-baskerville": "^5.0.3",
+    "@fontsource/comfortaa": "^5.0.4",
+    "@fontsource/libre-baskerville": "^5.0.4",
     "next": "^13.4.8",
     "playwright-core": "^1.32.3",
     "react": "^18.2.0",
