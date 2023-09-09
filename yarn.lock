@@ -262,10 +262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/comfortaa@npm:^5.0.11":
-  version: 5.0.11
-  resolution: "@fontsource/comfortaa@npm:5.0.11"
-  checksum: 5dfb1f852d85a8d9babce8090553f782e7f3d4cd6070a03dfe03f3816618797a998498c3f31d868ca7af12bbedffd5956dbe153ead29678e14bd41faa20f194d
+"@fontsource/comfortaa@npm:^5.0.12":
+  version: 5.0.12
+  resolution: "@fontsource/comfortaa@npm:5.0.12"
+  checksum: eff99b9c5708cfba2d0fb8695c25873ad0e34b487486d550345b36aa57a9ca7d46beedf719bb0127c405ed6b966c806d970e8c9e7c8cedaffde91465b32b2b34
   languageName: node
   linkType: hard
 
@@ -1426,7 +1426,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
-    "@fontsource/comfortaa": ^5.0.11
+    "@fontsource/comfortaa": ^5.0.12
     "@fontsource/libre-baskerville": ^5.0.8
     "@playwright/test": ^1.32.3
     "@types/node": 18.17.15
