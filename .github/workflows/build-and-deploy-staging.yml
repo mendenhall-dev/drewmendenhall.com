@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
       - uses: ./.github/actions/build
       - uses: actions/upload-artifact@v3
         with:
@@ -35,7 +35,7 @@ jobs:
         with:
           name: build-artifact
           path: ${{ env.DEPLOY_PATH }}
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
       - run: envsubst < deploy/site.bootstrap.template.conf > /etc/nginx/sites-available/$HOSTNAME.conf
       - run: ln -s -fn ../sites-available/$HOSTNAME.conf /etc/nginx/sites-enabled/$HOSTNAME.conf
       - run: sudo nginx -s reload
