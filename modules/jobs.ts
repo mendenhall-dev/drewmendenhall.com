@@ -4,7 +4,7 @@ export default [
     company: 'Swoop + Agero',
     position: 'Front-End Engineer & Front-End Team Lead',
     highlights: [
-      'Contribute with medium-size engineering organization to build realtime web app used by many of the largest motorclubs in the US.',
+      'Contribute with medium-size engineering organization to build a real-time web app used by many of the largest insurance companies and car manufacturers in the US.',
       'Gather consensus on Best Practices surrounding GraphQL schema design, testing methodology, and code design via linter rules and design patterns. Mentor teammates on Best Practices and share learnings.',
       'Plan and drive GraphQL migration projects, each of which reduced websocket message bandwidth usage by up to 15-30%.',
       'Manage production rollout of both experimental features and risky migrations.',
