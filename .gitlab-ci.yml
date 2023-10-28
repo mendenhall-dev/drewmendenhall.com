@@ -16,7 +16,7 @@ install_dependencies:
     key:
       files:
         - package.json
-  image: buildkite/puppeteer
+  image: buildkite/puppeteer@sha256:f4c9e3973bf90276a14bd62e3805ef3e126a92f1c50344bd5c9ebca1aa671434
   script:
     - npm install
   stage: install_dependencies
@@ -28,7 +28,7 @@ build:
     expire_in: 1 day
     paths:
       - $BUILD_PATH
-  image: buildkite/puppeteer
+  image: buildkite/puppeteer@sha256:f4c9e3973bf90276a14bd62e3805ef3e126a92f1c50344bd5c9ebca1aa671434
   script:
     - npm run build
   stage: build
