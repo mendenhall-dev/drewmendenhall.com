@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: echo "BRANCH_NAME=$(echo ${{ github.event.name == 'delete' && github.event.ref || github.ref_name }} | sed -r 's|^refs/heads/||g')" >> $GITHUB_ENV
-      - uses: strumwolf/delete-deployment-environment@v2.3.0
+      - uses: strumwolf/delete-deployment-environment@195215d2c5602aee6fb4b9cf0853970decca9e7a # v2.3.0
         with:
           environment: ${{ env.BRANCH_NAME }}
           onlyRemoveDeployments: true
