@@ -4,7 +4,6 @@
   commitMessageAction: '',
   commitMessageTopic: '{{{depName}}}@{{{toVersion}}}',
   commitMessageExtra: '',
-  gitLabAutomerge: true,
   rangeStrategy: 'bump',
   rebaseWhen: 'conflicted',
 }
