@@ -6,4 +6,5 @@
   commitMessageExtra: '',
   gitLabAutomerge: true,
   rangeStrategy: 'bump',
+  rebaseWhen: 'conflicted',
 }
