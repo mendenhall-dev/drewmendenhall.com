@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { defineConfig, devices } from '@playwright/test'
+import {defineConfig, devices} from '@playwright/test'
 
 const url = process.env.BASE_URL
 
@@ -16,7 +16,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {...devices['Desktop Chrome']},
     },
   ],
 })
