@@ -15,6 +15,9 @@ const eslintConfig = [
     languageOptions:{
       ecmaVersion: 'latest',
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
     rules: {
       'array-bracket-spacing': 'warn',
       'comma-dangle':
