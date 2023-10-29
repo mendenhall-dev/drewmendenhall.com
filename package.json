@@ -10,13 +10,13 @@
     "@fontsource/comfortaa": "^5.0.17",
     "@fontsource/libre-baskerville": "^5.0.8",
     "next": "^14.0.0",
-    "playwright-core": "^1.32.3",
+    "playwright-core": "^1.39.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.32.3",
+    "@playwright/test": "1.39.0",
     "@types/node": "20.8.9",
     "@types/react": "18.2.33",
     "@typescript-eslint/eslint-plugin": "6.9.0",

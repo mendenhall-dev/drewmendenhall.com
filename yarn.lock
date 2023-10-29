@@ -240,19 +240,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:1.32.3":
-  version: 1.32.3
-  resolution: "@playwright/test@npm:1.32.3"
+"@playwright/test@npm:1.39.0":
+  version: 1.39.0
+  resolution: "@playwright/test@npm:1.39.0"
   dependencies:
-    "@types/node": "npm:*"
-    fsevents: "npm:2.3.2"
-    playwright-core: "npm:1.32.3"
-  dependenciesMeta:
-    fsevents:
-      optional: true
+    playwright: "npm:1.39.0"
   bin:
     playwright: cli.js
-  checksum: d09e4135c868b4067f45b8c297d02b0d8ddb8298657c942a06c72f3d9a3236af94586718dc7590693dbb31ea4b8fcceeb8a1e8811072f2add7d952c5c9129df3
+  checksum: d808ca36f0a411ae09eece19fc93fcbd048541253c6c9e341fc9488613395bb94ebf65ad64e920d6be0fb20e887cf317c532a45d2c30e1804d6842e55c1fe6e9
   languageName: node
   linkType: hard
 
@@ -279,7 +274,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.8.9":
+"@types/node@npm:20.8.9":
   version: 20.8.9
   resolution: "@types/node@npm:20.8.9"
   dependencies:
@@ -945,7 +940,7 @@ __metadata:
   dependencies:
     "@fontsource/comfortaa": "npm:^5.0.17"
     "@fontsource/libre-baskerville": "npm:^5.0.8"
-    "@playwright/test": "npm:1.32.3"
+    "@playwright/test": "npm:1.39.0"
     "@types/node": "npm:20.8.9"
     "@types/react": "npm:18.2.33"
     "@typescript-eslint/eslint-plugin": "npm:6.9.0"
@@ -956,7 +951,7 @@ __metadata:
     eslint-plugin-react: "npm:7.33.2"
     eslint-plugin-react-hooks: "npm:4.6.0"
     next: "npm:^14.0.0"
-    playwright-core: "npm:^1.32.3"
+    playwright-core: "npm:^1.39.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-components: "npm:^6.1.0"
@@ -2550,12 +2545,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.32.3, playwright-core@npm:^1.32.3":
-  version: 1.32.3
-  resolution: "playwright-core@npm:1.32.3"
+"playwright-core@npm:1.39.0, playwright-core@npm:^1.39.0":
+  version: 1.39.0
+  resolution: "playwright-core@npm:1.39.0"
+  bin:
+    playwright-core: cli.js
+  checksum: dbd719ae77ae84a43f831beb89514ca5cca62840a2f0cce445645002ac045c256c19b5f4f3cf9a7aa205428a1571e9e8d946ff1937cc316033ea58090c549a76
+  languageName: node
+  linkType: hard
+
+"playwright@npm:1.39.0":
+  version: 1.39.0
+  resolution: "playwright@npm:1.39.0"
+  dependencies:
+    fsevents: "npm:2.3.2"
+    playwright-core: "npm:1.39.0"
+  dependenciesMeta:
+    fsevents:
+      optional: true
   bin:
     playwright: cli.js
-  checksum: 8b94feb15084813607abac69ef3d4f78b345bcc89e322706e62c203b79e74096caf499ce4cd4103b1bfc853f17a9ff0573f636dc0ee88f56a5cb6ed18ce55f06
+  checksum: b55adb3453a9c2a02fe61dbcbd5fcb0cbae1038ea6115158c7933d203ae5b62a13cb294905d6661836751a5825bc2cfdc71b67988082ec47ac6930ca744af724
   languageName: node
   linkType: hard
 
