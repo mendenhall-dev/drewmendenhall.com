@@ -20,17 +20,7 @@ const eslintConfig = [
     },
     rules: {
       'array-bracket-spacing': 'warn',
-      'comma-dangle':
-      [
-        'warn',
-        {
-          arrays: 'always-multiline',
-          exports: 'always-multiline',
-          functions: 'always-multiline',
-          imports: 'always-multiline',
-          objects: 'always-multiline',
-        },
-      ],
+      'comma-dangle': ['warn', 'always-multiline'],
       'comma-spacing': 'warn',
       'curly': ['warn', 'multi-line'],
       'indent': ['warn', 2, {SwitchCase: 1, flatTernaryExpressions: true}],
