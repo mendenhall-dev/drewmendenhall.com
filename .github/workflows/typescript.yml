@@ -8,7 +8,7 @@ on:
     paths:
       - '**/*.ts'
       - '**/*.tsx'
-      - .github/actions/setup-node/
+      - .github/actions/setup-node/**
       - .github/workflows/typescript.yml
       - package.json
       - tsconfig.json
