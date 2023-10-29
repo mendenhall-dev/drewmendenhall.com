@@ -8,6 +8,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  output: 'export',
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
