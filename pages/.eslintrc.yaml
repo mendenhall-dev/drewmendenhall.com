@@ -17,7 +17,6 @@ rules:
   react/no-direct-mutation-state: error
   react/no-multi-comp: warn
   react/no-unknown-property: error
-  react/react-in-jsx-scope: error
   react/sort-prop-types: warn
 settings:
   react:
