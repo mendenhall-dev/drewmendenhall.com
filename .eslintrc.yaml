@@ -1,5 +1,7 @@
 env:
   node: true
+ignorePatterns:
+  - /out/
 parserOptions:
   ecmaVersion: 2019
   sourceType: module
