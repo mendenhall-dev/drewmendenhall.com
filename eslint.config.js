@@ -12,7 +12,7 @@ const eslintConfig = [{
     'out/**',
   ],
   languageOptions:{
-    ecmaVersion: 2019,
+    ecmaVersion: 'latest',
   },
   rules: {
     'array-bracket-spacing': 'warn',
