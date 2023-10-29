@@ -951,7 +951,7 @@ __metadata:
     eslint-plugin-react: "npm:7.33.2"
     eslint-plugin-react-hooks: "npm:4.6.0"
     next: "npm:^14.0.0"
-    playwright-core: "npm:^1.39.0"
+    playwright-core: "npm:1.39.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-components: "npm:^6.1.0"
@@ -2545,7 +2545,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.39.0, playwright-core@npm:^1.39.0":
+"playwright-core@npm:1.39.0":
   version: 1.39.0
   resolution: "playwright-core@npm:1.39.0"
   bin:
