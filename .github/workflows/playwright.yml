@@ -4,12 +4,13 @@ on: deployment_status
 
 jobs:
   playwright:
+    container:
+      image: mcr.microsoft.com/playwright:v1.39.0-jammy
     if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: ./.github/actions/setup-node
-      - uses: ./.github/actions/setup-playwright
       - run: yarn playwright test
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
