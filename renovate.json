@@ -1,8 +1,9 @@
 {
-  extends: ["config:best-practices", ":automergeMinor"],
-  commitMessageAction: "",
-  commitMessageTopic: "{{{depName}}}@{{{newVersion}}}",
-  commitMessageExtra: "",
-  rangeStrategy: "bump",
-  rebaseWhen: "conflicted",
+  "extends": ["config:best-practices", ":automergeMinor"],
+
+  "commitMessageAction": "",
+  "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
+  "commitMessageExtra": "",
+  "rangeStrategy": "bump",
+  "rebaseWhen": "conflicted"
 }
