@@ -5,7 +5,7 @@ runs:
   using: composite
   steps:
     - run: |
-        PLAYWRIGHT_VERSION=`yarn info @playwright/test --name-only | cut -d @ -f 3 | cut -d : -f 2`
+        PLAYWRIGHT_VERSION=`yarn info playwright-core --name-only | cut -d @ -f 2 | cut -d : -f 2`
         echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
       id: playwright-version
       shell: sh
