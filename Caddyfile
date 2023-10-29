@@ -1,0 +1,11 @@
+drewmendenhall.localhost {
+	reverse_proxy localhost:7433
+
+	@websockets {
+		header Connection *Upgrade*
+		header Upgrade websocket
+	}
+	reverse_proxy @websockets localhost:7433
+
+	import Caddyfile.local*
+}
