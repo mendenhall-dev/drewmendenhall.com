@@ -16,6 +16,6 @@ runs:
       with:
         key: ${{ runner.os }}-playwright-binaries-${{ env.PLAYWRIGHT_VERSION }}
         path: ~/.cache/ms-playwright
-    - run: yarn playwright install --with-deps
+    - run: yarn playwright-core install --with-deps
       if: steps.playwright-binaries.outputs.cache-hit != 'true'
       shell: sh
