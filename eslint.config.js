@@ -1,14 +1,18 @@
-/** @type { import("eslint").Linter.Config } */
-const eslintConfig = {
-  env: {
-    node: true,
-  },
-  ignorePatterns: [
-    '/out/',
+import typescriptESLint from '@typescript-eslint/eslint-plugin'
+import typescriptParser from '@typescript-eslint/parser'
+
+/** @type { import("eslint").Linter.FlatConfig[] } */
+const eslintConfig = [{
+  files: [
+    '**/.js',
+    '**/.ts',
+    '**/.tsx',
   ],
-  parserOptions: {
+  ignores: [
+    'out/**',
+  ],
+  languageOptions:{
     ecmaVersion: 2019,
-    sourceType: 'module',
   },
   rules: {
     'array-bracket-spacing': 'warn',
@@ -36,24 +40,31 @@ const eslintConfig = {
     'quote-props': ['warn', 'consistent-as-needed'],
     'semi': ['error', 'never'],
     'strict': ['error', 'never'],
-  },
+  },},
 
-  overrides: [{
+  {
     files: [
       '*.ts',
       '*.tsx',
     ],
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-      project: true,
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        project: true,
+      },
     },
-    plugins: [
-      '@typescript-eslint',
-    ],
-    extends: [
-      'plugin:@typescript-eslint/strict-type-checked',
-    ],
-  }],
-}
+    plugins: {
+      '@typescript-eslint': typescriptESLint,
+    },
+  },
 
-module.exports = eslintConfig
+  {
+    files: [
+      '*.ts',
+      '*.tsx',
+    ],
+    rules: typescriptESLint.configs['strict-type-checked'].rules,
+  },
+]
+
+export default eslintConfig
