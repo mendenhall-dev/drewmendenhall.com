@@ -3,7 +3,7 @@ name: yarn
 on:
   push:
     paths:
-      - .github/actions/setup-node/
+      - .github/actions/setup-node/**
       - .github/workflows/yarn.yml
       - yarn.lock
 
