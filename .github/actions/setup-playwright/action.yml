@@ -11,8 +11,6 @@ runs:
       shell: sh
     - uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
       id: playwright-binaries
-      env:
-        PLAYWRIGHT_VERSION: env.PLAYWRIGHT_VERSION
       with:
         key: ${{ runner.os }}-playwright-binaries-${{ env.PLAYWRIGHT_VERSION }}
         path: ~/.cache/ms-playwright
