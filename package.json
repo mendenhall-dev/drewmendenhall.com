@@ -31,9 +31,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "next build && node ./print-resume",
-    "dev": "env-cmd --use-shell 'next dev --port ${PORT:-3000}'",
-    "start": "next start",
+    "build": "yarn next build && yarn node ./print-resume",
+    "dev": "yarn env-cmd --use-shell 'next dev --port ${PORT:-3000}'",
+    "start": "yarn next start",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
