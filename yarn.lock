@@ -77,10 +77,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/comfortaa@npm:^5.0.17":
-  version: 5.0.17
-  resolution: "@fontsource/comfortaa@npm:5.0.17"
-  checksum: f2fbdececb93cb01d3a162bc57816f3b86a61dfd4c551fd2e6959d62098fdca2478e4e48adb49d7a08aafbde7e461be0ecb3e73074d9f0777a4d109663e9115d
+"@fontsource/comfortaa@npm:^5.0.18":
+  version: 5.0.18
+  resolution: "@fontsource/comfortaa@npm:5.0.18"
+  checksum: f094fe68593fef6c09e7941b38e1b9fe41fef5c6e6063cb59e1de91449ff752c6f09afe426fafc70ea14b3eda3b2fb1215c2be8e465b31810db7f78d4c2e38be
   languageName: node
   linkType: hard
 
@@ -955,7 +955,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
-    "@fontsource/comfortaa": "npm:^5.0.17"
+    "@fontsource/comfortaa": "npm:^5.0.18"
     "@fontsource/libre-baskerville": "npm:^5.0.8"
     "@playwright/test": "npm:1.39.0"
     "@types/eslint": "npm:8.44.8"
