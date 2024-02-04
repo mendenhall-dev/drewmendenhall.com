@@ -3,10 +3,17 @@
 
   "extends": ["config:best-practices", ":automergeMinor"],
 
-  "commitMessageAction": "",
-  "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
-  "commitMessageExtra": "",
   "configMigration": true,
   "rangeStrategy": "bump",
-  "rebaseWhen": "conflicted"
+  "rebaseWhen": "conflicted",
+
+  "hostRules": [
+    {
+      "matchManagers": ["npm"],
+
+      "commitMessageAction": "",
+      "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
+      "commitMessageExtra": ""
+    }
+  ]
 }
