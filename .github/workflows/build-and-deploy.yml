@@ -18,8 +18,6 @@ jobs:
       - uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
         with:
           static_site_generator: next
-      # TODO: remove when this does not create warnings
-      - run: rm next.config.js
       - uses: ./.github/actions/build
       - run: mv out _site
       - uses: actions/upload-pages-artifact@a753861a5debcf57bf8b404356158c8e1e33150c # v2.0.0
