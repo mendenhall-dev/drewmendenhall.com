@@ -14,7 +14,8 @@
       "commitMessageAction": "",
       "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
       "commitMessageExtra": "",
-      "postUpdateOptions": ["yarnDedupeHighest"]
+      "postUpdateOptions": ["yarnDedupeHighest"],
+      "stabilityDays": 3
     }
   ]
 }
