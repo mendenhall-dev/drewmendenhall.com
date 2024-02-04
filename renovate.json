@@ -14,8 +14,8 @@
       "commitMessageAction": "",
       "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
       "commitMessageExtra": "",
-      "postUpdateOptions": ["yarnDedupeHighest"],
-      "minimumReleaseAge": "3 days"
+      "minimumReleaseAge": "3 days",
+      "postUpdateOptions": ["yarnDedupeHighest"]
     }
   ]
 }
