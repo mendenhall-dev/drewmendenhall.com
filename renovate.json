@@ -7,7 +7,7 @@
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
 
-  "hostRules": [
+  "packageRules": [
     {
       "matchManagers": ["npm"],
 
