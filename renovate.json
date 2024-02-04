@@ -15,7 +15,7 @@
       "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
       "commitMessageExtra": "",
       "postUpdateOptions": ["yarnDedupeHighest"],
-      "stabilityDays": 3
+      "minimumReleaseAge": "3 days"
     }
   ]
 }
