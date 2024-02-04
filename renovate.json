@@ -13,7 +13,8 @@
 
       "commitMessageAction": "",
       "commitMessageTopic": "{{{depName}}}@{{{newVersion}}}",
-      "commitMessageExtra": ""
+      "commitMessageExtra": "",
+      "postUpdateOptions": ["yarnDedupeHighest"]
     }
   ]
 }
