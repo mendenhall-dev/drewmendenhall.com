@@ -4,7 +4,7 @@
   "description": "The source for my personal web site.",
   "version": "0.1.0",
   "author": "Drew Mendenhall <drew@mendenhall.io>",
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.1.1",
   "type": "module",
   "dependencies": {
     "@fontsource/comfortaa": "^5.0.18",
