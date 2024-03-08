@@ -77,17 +77,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/comfortaa@npm:^5.0.18":
-  version: 5.0.18
-  resolution: "@fontsource/comfortaa@npm:5.0.18"
-  checksum: 10c0/f094fe68593fef6c09e7941b38e1b9fe41fef5c6e6063cb59e1de91449ff752c6f09afe426fafc70ea14b3eda3b2fb1215c2be8e465b31810db7f78d4c2e38be
+"@fontsource/comfortaa@npm:^5.0.19":
+  version: 5.0.19
+  resolution: "@fontsource/comfortaa@npm:5.0.19"
+  checksum: 10c0/3653cd36aff3cd009f1b70f2dfe509baf7faa1631bc2599fc1508fe9c32eb93e33744f06acb9cd8e0cff909ef3af0ec045295eeb051f767254f332c400560e64
   languageName: node
   linkType: hard
 
-"@fontsource/libre-baskerville@npm:^5.0.8":
-  version: 5.0.8
-  resolution: "@fontsource/libre-baskerville@npm:5.0.8"
-  checksum: 10c0/f7019b9f061bf17243af511dba5d4765bdbf6242df383754b8c5e1ad184a733fefb5f6b2de610ed35703d4ac58afac4a391b09e169c547cbbb88739a00177a48
+"@fontsource/libre-baskerville@npm:^5.0.12":
+  version: 5.0.12
+  resolution: "@fontsource/libre-baskerville@npm:5.0.12"
+  checksum: 10c0/4bf7569fa4bce4d707539d64172ac5ba5a4462bd68fbe1a316b9e26ff91af1c3ba5dc58bd5ebd933de4fb3b14d5d11fd5f31e6d9ddb7971dab82fb92ff55fb4f
   languageName: node
   linkType: hard
 
@@ -1033,8 +1033,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "drewmendenhall.com@workspace:."
   dependencies:
-    "@fontsource/comfortaa": "npm:^5.0.18"
-    "@fontsource/libre-baskerville": "npm:^5.0.8"
+    "@fontsource/comfortaa": "npm:^5.0.19"
+    "@fontsource/libre-baskerville": "npm:^5.0.12"
     "@playwright/test": "npm:1.42.1"
     "@types/eslint": "npm:8.56.5"
     "@types/node": "npm:20.11.24"
