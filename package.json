@@ -18,7 +18,7 @@
     "@playwright/test": "1.42.1",
     "@types/eslint": "8.56.6",
     "@types/node": "20.11.30",
-    "@types/react": "18.2.67",
+    "@types/react": "18.2.68",
     "@typescript-eslint/eslint-plugin": "7.1.1",
     "@typescript-eslint/parser": "7.1.1",
     "dotenv": "16.4.5",
