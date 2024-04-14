@@ -1030,7 +1030,7 @@ __metadata:
     eslint: "npm:9.0.0"
     eslint-plugin-react: "npm:7.34.1"
     eslint-plugin-react-hooks: "npm:4.6.0"
-    next: "npm:^14.2.0"
+    next: "npm:^14.2.1"
     playwright-core: "npm:1.43.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -2401,7 +2401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^14.2.0":
+"next@npm:^14.2.1":
   version: 14.2.1
   resolution: "next@npm:14.2.1"
   dependencies:
