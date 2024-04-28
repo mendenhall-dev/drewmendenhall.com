@@ -10,8 +10,8 @@
     "@fontsource/comfortaa": "^5.0.20",
     "@fontsource/libre-baskerville": "^5.0.13",
     "next": "^14.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "env-cmd": "10.1.0",
     "eslint": "9.1.1",
     "eslint-plugin-react": "7.34.1",
-    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-hooks": "4.6.1",
     "playwright-core": "1.43.1",
     "typescript": "5.4.5"
   },
