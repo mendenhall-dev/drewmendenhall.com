@@ -21,7 +21,7 @@
     "@types/react": "18.3.3",
     "@typescript-eslint/eslint-plugin": "7.8.0",
     "@typescript-eslint/parser": "7.8.0",
-    "dotenv": "16.4.5",
+    "dotenv": "16.4.7",
     "env-cmd": "10.1.0",
     "eslint": "9.7.0",
     "eslint-plugin-react": "7.34.4",
