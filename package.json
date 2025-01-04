@@ -7,8 +7,8 @@
   "packageManager": "yarn@4.5.0",
   "type": "module",
   "dependencies": {
-    "@fontsource/comfortaa": "^5.0.20",
-    "@fontsource/libre-baskerville": "^5.0.13",
+    "@fontsource/comfortaa": "^5.1.1",
+    "@fontsource/libre-baskerville": "^5.1.1",
     "next": "^14.2.22",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
