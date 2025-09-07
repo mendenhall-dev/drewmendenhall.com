@@ -356,12 +356,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.19.10":
-  version: 20.19.10
-  resolution: "@types/node@npm:20.19.10"
+"@types/node@npm:20.19.12":
+  version: 20.19.12
+  resolution: "@types/node@npm:20.19.12"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/dac81561f6d7cbd37c876c4023846095a71d8b62df52c8b6b32de67f6ca6aaf2ffd0c1e02ede6d2c8af41e934ce2005f67b8b6348b79dd355c05f3192aa7b59a
+  checksum: 10c0/2bb935ea61884ec510be6186d32398f16eabbbfa0d1ccd9a79922093cfa1d58babe2ade52d614b7359ec876fc5687abed8fc461d3b87413cd000d28c8db6da0d
   languageName: node
   linkType: hard
 
@@ -1077,7 +1077,7 @@ __metadata:
     "@fontsource/libre-baskerville": "npm:^5.0.13"
     "@playwright/test": "npm:1.45.0"
     "@types/eslint": "npm:8.56.12"
-    "@types/node": "npm:20.19.10"
+    "@types/node": "npm:20.19.12"
     "@types/react": "npm:18.3.24"
     "@typescript-eslint/eslint-plugin": "npm:7.8.0"
     "@typescript-eslint/parser": "npm:7.8.0"
